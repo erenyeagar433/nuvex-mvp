@@ -1,0 +1,3959 @@
+[
+  {
+    "offense_id": 1001,
+    "description": "Brute Force Login Attempts",
+    "magnitude": 7,
+    "source_ips": [
+      "10.0.2.49",
+      "10.0.0.246",
+      "10.0.3.171",
+      "10.0.1.94",
+      "10.0.0.67",
+      "10.0.2.88",
+      "10.0.3.147",
+      "10.0.1.214",
+      "10.0.0.32",
+      "10.0.3.6"
+    ],
+    "destination_ips": [
+      "192.168.1.172"
+    ],
+    "username": "root",
+    "start_time": "2025-07-04T01:07:37.135918",
+    "event_count": 10,
+    "log_sources": [
+      "Proxy",
+      "VPN"
+    ],
+    "events": [
+      {
+        "event_type": "Brute Force Login Attempts",
+        "source_ip": "10.0.0.246",
+        "destination_ip": "192.168.1.172",
+        "source_port": 5615,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 64564872,
+        "username": "admin",
+        "payload": "<13>Jul 04 08:39:37 Log Sample Brute Force Login Attempts from 10.0.0.246 to 192.168.1.172"
+      },
+      {
+        "event_type": "Brute Force Login Attempts",
+        "source_ip": "10.0.3.147",
+        "destination_ip": "192.168.1.172",
+        "source_port": 28503,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 62242291,
+        "username": "admin",
+        "payload": "<13>Jul 04 07:16:37 Log Sample Brute Force Login Attempts from 10.0.3.147 to 192.168.1.172"
+      },
+      {
+        "event_type": "Brute Force Login Attempts",
+        "source_ip": "10.0.3.6",
+        "destination_ip": "192.168.1.172",
+        "source_port": 12723,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 66971369,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:09:37 Log Sample Brute Force Login Attempts from 10.0.3.6 to 192.168.1.172"
+      },
+      {
+        "event_type": "Brute Force Login Attempts",
+        "source_ip": "10.0.2.49",
+        "destination_ip": "192.168.1.172",
+        "source_port": 62747,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 67103470,
+        "username": "unknown",
+        "payload": "<13>Jul 04 04:31:37 Log Sample Brute Force Login Attempts from 10.0.2.49 to 192.168.1.172"
+      },
+      {
+        "event_type": "Brute Force Login Attempts",
+        "source_ip": "10.0.1.94",
+        "destination_ip": "192.168.1.172",
+        "source_port": 60247,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 63304258,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:14:37 Log Sample Brute Force Login Attempts from 10.0.1.94 to 192.168.1.172"
+      },
+      {
+        "event_type": "Brute Force Login Attempts",
+        "source_ip": "10.0.0.67",
+        "destination_ip": "192.168.1.172",
+        "source_port": 20477,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 65149131,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 07:45:37 Log Sample Brute Force Login Attempts from 10.0.0.67 to 192.168.1.172"
+      },
+      {
+        "event_type": "Brute Force Login Attempts",
+        "source_ip": "10.0.3.171",
+        "destination_ip": "192.168.1.172",
+        "source_port": 38575,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 62604303,
+        "username": "root",
+        "payload": "<13>Jul 04 08:28:37 Log Sample Brute Force Login Attempts from 10.0.3.171 to 192.168.1.172"
+      },
+      {
+        "event_type": "Brute Force Login Attempts",
+        "source_ip": "10.0.2.88",
+        "destination_ip": "192.168.1.172",
+        "source_port": 23232,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 64926791,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:07:37 Log Sample Brute Force Login Attempts from 10.0.2.88 to 192.168.1.172"
+      },
+      {
+        "event_type": "Brute Force Login Attempts",
+        "source_ip": "10.0.1.214",
+        "destination_ip": "192.168.1.172",
+        "source_port": 48049,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 69885550,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:27:37 Log Sample Brute Force Login Attempts from 10.0.1.214 to 192.168.1.172"
+      },
+      {
+        "event_type": "Brute Force Login Attempts",
+        "source_ip": "10.0.0.32",
+        "destination_ip": "192.168.1.172",
+        "source_port": 35030,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 69218172,
+        "username": "root",
+        "payload": "<13>Jul 04 05:13:37 Log Sample Brute Force Login Attempts from 10.0.0.32 to 192.168.1.172"
+      }
+    ]
+  },
+  {
+    "offense_id": 1002,
+    "description": "Suspicious Remote PowerShell Execution",
+    "magnitude": 4,
+    "source_ips": [
+      "192.168.1.32"
+    ],
+    "destination_ips": [
+      "10.0.3.96",
+      "10.0.1.252",
+      "10.0.2.182",
+      "10.0.2.50",
+      "10.0.0.142"
+    ],
+    "username": "admin",
+    "start_time": "2025-07-04T04:07:37.136028",
+    "event_count": 5,
+    "log_sources": [
+      "Proxy",
+      "Firewall"
+    ],
+    "events": [
+      {
+        "event_type": "Suspicious Remote PowerShell Execution",
+        "source_ip": "192.168.1.32",
+        "destination_ip": "10.0.1.252",
+        "source_port": 1353,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 67150058,
+        "username": "guest",
+        "payload": "<13>Jul 04 07:24:37 Log Sample Suspicious Remote PowerShell Execution from 192.168.1.32 to 10.0.1.252"
+      },
+      {
+        "event_type": "Suspicious Remote PowerShell Execution",
+        "source_ip": "192.168.1.32",
+        "destination_ip": "10.0.3.96",
+        "source_port": 54451,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 66494806,
+        "username": "admin",
+        "payload": "<13>Jul 04 02:43:37 Log Sample Suspicious Remote PowerShell Execution from 192.168.1.32 to 10.0.3.96"
+      },
+      {
+        "event_type": "Suspicious Remote PowerShell Execution",
+        "source_ip": "192.168.1.32",
+        "destination_ip": "10.0.0.142",
+        "source_port": 7195,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 68504069,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 06:42:37 Log Sample Suspicious Remote PowerShell Execution from 192.168.1.32 to 10.0.0.142"
+      },
+      {
+        "event_type": "Suspicious Remote PowerShell Execution",
+        "source_ip": "192.168.1.32",
+        "destination_ip": "10.0.2.182",
+        "source_port": 22565,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 61357967,
+        "username": "unknown",
+        "payload": "<13>Jul 04 02:46:37 Log Sample Suspicious Remote PowerShell Execution from 192.168.1.32 to 10.0.2.182"
+      },
+      {
+        "event_type": "Suspicious Remote PowerShell Execution",
+        "source_ip": "192.168.1.32",
+        "destination_ip": "10.0.2.50",
+        "source_port": 11376,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 62709457,
+        "username": "admin",
+        "payload": "<13>Jul 04 00:55:37 Log Sample Suspicious Remote PowerShell Execution from 192.168.1.32 to 10.0.2.50"
+      }
+    ]
+  },
+  {
+    "offense_id": 1003,
+    "description": "Malware Domain Connection",
+    "magnitude": 7,
+    "source_ips": [
+      "10.0.1.114",
+      "10.0.0.54",
+      "10.0.3.221",
+      "10.0.2.220",
+      "10.0.0.166",
+      "10.0.2.184",
+      "10.0.1.28",
+      "10.0.1.135"
+    ],
+    "destination_ips": [
+      "192.168.1.34"
+    ],
+    "username": "root",
+    "start_time": "2025-07-02T15:07:37.136155",
+    "event_count": 8,
+    "log_sources": [
+      "Firewall",
+      "VPN"
+    ],
+    "events": [
+      {
+        "event_type": "Malware Domain Connection",
+        "source_ip": "10.0.1.28",
+        "destination_ip": "192.168.1.34",
+        "source_port": 1906,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 63075748,
+        "username": "root",
+        "payload": "<13>Jul 04 05:33:37 Log Sample Malware Domain Connection from 10.0.1.28 to 192.168.1.34"
+      },
+      {
+        "event_type": "Malware Domain Connection",
+        "source_ip": "10.0.0.54",
+        "destination_ip": "192.168.1.34",
+        "source_port": 59012,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 69966177,
+        "username": "guest",
+        "payload": "<13>Jul 04 08:02:37 Log Sample Malware Domain Connection from 10.0.0.54 to 192.168.1.34"
+      },
+      {
+        "event_type": "Malware Domain Connection",
+        "source_ip": "10.0.1.114",
+        "destination_ip": "192.168.1.34",
+        "source_port": 65108,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 69561571,
+        "username": "guest",
+        "payload": "<13>Jul 04 04:41:37 Log Sample Malware Domain Connection from 10.0.1.114 to 192.168.1.34"
+      },
+      {
+        "event_type": "Malware Domain Connection",
+        "source_ip": "10.0.0.166",
+        "destination_ip": "192.168.1.34",
+        "source_port": 43210,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 64308708,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 05:44:37 Log Sample Malware Domain Connection from 10.0.0.166 to 192.168.1.34"
+      },
+      {
+        "event_type": "Malware Domain Connection",
+        "source_ip": "10.0.2.220",
+        "destination_ip": "192.168.1.34",
+        "source_port": 10891,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 63772227,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 08:19:37 Log Sample Malware Domain Connection from 10.0.2.220 to 192.168.1.34"
+      },
+      {
+        "event_type": "Malware Domain Connection",
+        "source_ip": "10.0.1.135",
+        "destination_ip": "192.168.1.34",
+        "source_port": 39011,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 60303442,
+        "username": "admin",
+        "payload": "<13>Jul 04 06:03:37 Log Sample Malware Domain Connection from 10.0.1.135 to 192.168.1.34"
+      },
+      {
+        "event_type": "Malware Domain Connection",
+        "source_ip": "10.0.3.221",
+        "destination_ip": "192.168.1.34",
+        "source_port": 32020,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 67069211,
+        "username": "admin",
+        "payload": "<13>Jul 04 08:24:37 Log Sample Malware Domain Connection from 10.0.3.221 to 192.168.1.34"
+      },
+      {
+        "event_type": "Malware Domain Connection",
+        "source_ip": "10.0.2.184",
+        "destination_ip": "192.168.1.34",
+        "source_port": 62954,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 62567635,
+        "username": "root",
+        "payload": "<13>Jul 04 03:21:37 Log Sample Malware Domain Connection from 10.0.2.184 to 192.168.1.34"
+      }
+    ]
+  },
+  {
+    "offense_id": 1004,
+    "description": "SQL Injection Attempt",
+    "magnitude": 5,
+    "source_ips": [
+      "192.168.1.212"
+    ],
+    "destination_ips": [
+      "10.0.0.62",
+      "10.0.2.99",
+      "10.0.3.141",
+      "10.0.3.167",
+      "10.0.0.170",
+      "10.0.2.141",
+      "10.0.3.196"
+    ],
+    "username": "unknown",
+    "start_time": "2025-07-02T13:07:37.136253",
+    "event_count": 7,
+    "log_sources": [
+      "VPN",
+      "Proxy"
+    ],
+    "events": [
+      {
+        "event_type": "SQL Injection Attempt",
+        "source_ip": "192.168.1.212",
+        "destination_ip": "10.0.3.196",
+        "source_port": 60217,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 65809522,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:35:37 Log Sample SQL Injection Attempt from 192.168.1.212 to 10.0.3.196"
+      },
+      {
+        "event_type": "SQL Injection Attempt",
+        "source_ip": "192.168.1.212",
+        "destination_ip": "10.0.3.167",
+        "source_port": 22152,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 66215202,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:18:37 Log Sample SQL Injection Attempt from 192.168.1.212 to 10.0.3.167"
+      },
+      {
+        "event_type": "SQL Injection Attempt",
+        "source_ip": "192.168.1.212",
+        "destination_ip": "10.0.2.99",
+        "source_port": 7584,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 64405891,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:31:37 Log Sample SQL Injection Attempt from 192.168.1.212 to 10.0.2.99"
+      },
+      {
+        "event_type": "SQL Injection Attempt",
+        "source_ip": "192.168.1.212",
+        "destination_ip": "10.0.2.141",
+        "source_port": 58103,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 69544305,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 05:45:37 Log Sample SQL Injection Attempt from 192.168.1.212 to 10.0.2.141"
+      },
+      {
+        "event_type": "SQL Injection Attempt",
+        "source_ip": "192.168.1.212",
+        "destination_ip": "10.0.0.170",
+        "source_port": 21013,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 65510432,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:21:37 Log Sample SQL Injection Attempt from 192.168.1.212 to 10.0.0.170"
+      },
+      {
+        "event_type": "SQL Injection Attempt",
+        "source_ip": "192.168.1.212",
+        "destination_ip": "10.0.3.141",
+        "source_port": 43142,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 66375889,
+        "username": "root",
+        "payload": "<13>Jul 04 04:53:37 Log Sample SQL Injection Attempt from 192.168.1.212 to 10.0.3.141"
+      },
+      {
+        "event_type": "SQL Injection Attempt",
+        "source_ip": "192.168.1.212",
+        "destination_ip": "10.0.0.62",
+        "source_port": 65425,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 65538884,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 08:46:37 Log Sample SQL Injection Attempt from 192.168.1.212 to 10.0.0.62"
+      }
+    ]
+  },
+  {
+    "offense_id": 1005,
+    "description": "Multiple Failed VPN Logins",
+    "magnitude": 5,
+    "source_ips": [
+      "10.0.3.124",
+      "10.0.0.211",
+      "10.0.3.234",
+      "10.0.3.123",
+      "10.0.2.60",
+      "10.0.1.8"
+    ],
+    "destination_ips": [
+      "192.168.1.228"
+    ],
+    "username": "user",
+    "start_time": "2025-07-03T18:07:37.136338",
+    "event_count": 6,
+    "log_sources": [
+      "IDS",
+      "VPN"
+    ],
+    "events": [
+      {
+        "event_type": "Multiple Failed VPN Logins",
+        "source_ip": "10.0.2.60",
+        "destination_ip": "192.168.1.228",
+        "source_port": 13836,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 62345024,
+        "username": "guest",
+        "payload": "<13>Jul 04 04:48:37 Log Sample Multiple Failed VPN Logins from 10.0.2.60 to 192.168.1.228"
+      },
+      {
+        "event_type": "Multiple Failed VPN Logins",
+        "source_ip": "10.0.1.8",
+        "destination_ip": "192.168.1.228",
+        "source_port": 2621,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 66227253,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:22:37 Log Sample Multiple Failed VPN Logins from 10.0.1.8 to 192.168.1.228"
+      },
+      {
+        "event_type": "Multiple Failed VPN Logins",
+        "source_ip": "10.0.3.123",
+        "destination_ip": "192.168.1.228",
+        "source_port": 29969,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 68147732,
+        "username": "admin",
+        "payload": "<13>Jul 04 02:20:37 Log Sample Multiple Failed VPN Logins from 10.0.3.123 to 192.168.1.228"
+      },
+      {
+        "event_type": "Multiple Failed VPN Logins",
+        "source_ip": "10.0.3.124",
+        "destination_ip": "192.168.1.228",
+        "source_port": 26024,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 69396283,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 01:35:37 Log Sample Multiple Failed VPN Logins from 10.0.3.124 to 192.168.1.228"
+      },
+      {
+        "event_type": "Multiple Failed VPN Logins",
+        "source_ip": "10.0.0.211",
+        "destination_ip": "192.168.1.228",
+        "source_port": 48808,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 60261479,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:51:37 Log Sample Multiple Failed VPN Logins from 10.0.0.211 to 192.168.1.228"
+      },
+      {
+        "event_type": "Multiple Failed VPN Logins",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.228",
+        "source_port": 8378,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 68175802,
+        "username": "guest",
+        "payload": "<13>Jul 04 05:52:37 Log Sample Multiple Failed VPN Logins from 10.0.3.234 to 192.168.1.228"
+      }
+    ]
+  },
+  {
+    "offense_id": 1006,
+    "description": "Abnormal Data Exfiltration",
+    "magnitude": 10,
+    "source_ips": [
+      "192.168.1.243"
+    ],
+    "destination_ips": [
+      "10.0.2.185",
+      "10.0.2.171",
+      "10.0.3.139",
+      "10.0.2.183"
+    ],
+    "username": "user",
+    "start_time": "2025-07-03T23:07:37.136405",
+    "event_count": 4,
+    "log_sources": [
+      "Firewall",
+      "IDS"
+    ],
+    "events": [
+      {
+        "event_type": "Abnormal Data Exfiltration",
+        "source_ip": "192.168.1.243",
+        "destination_ip": "10.0.2.183",
+        "source_port": 51329,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 64863376,
+        "username": "guest",
+        "payload": "<13>Jul 04 04:15:37 Log Sample Abnormal Data Exfiltration from 192.168.1.243 to 10.0.2.183"
+      },
+      {
+        "event_type": "Abnormal Data Exfiltration",
+        "source_ip": "192.168.1.243",
+        "destination_ip": "10.0.2.171",
+        "source_port": 59812,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 60909043,
+        "username": "root",
+        "payload": "<13>Jul 04 04:08:37 Log Sample Abnormal Data Exfiltration from 192.168.1.243 to 10.0.2.171"
+      },
+      {
+        "event_type": "Abnormal Data Exfiltration",
+        "source_ip": "192.168.1.243",
+        "destination_ip": "10.0.2.185",
+        "source_port": 27596,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 62765110,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:16:37 Log Sample Abnormal Data Exfiltration from 192.168.1.243 to 10.0.2.185"
+      },
+      {
+        "event_type": "Abnormal Data Exfiltration",
+        "source_ip": "192.168.1.243",
+        "destination_ip": "10.0.3.139",
+        "source_port": 10712,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 62633766,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 05:58:37 Log Sample Abnormal Data Exfiltration from 192.168.1.243 to 10.0.3.139"
+      }
+    ]
+  },
+  {
+    "offense_id": 1007,
+    "description": "Port Scan from External Host",
+    "magnitude": 4,
+    "source_ips": [
+      "10.0.1.84",
+      "10.0.2.111",
+      "10.0.2.13",
+      "10.0.3.234",
+      "10.0.2.154",
+      "10.0.0.98",
+      "10.0.0.233",
+      "10.0.1.100",
+      "10.0.1.225",
+      "10.0.0.88"
+    ],
+    "destination_ips": [
+      "192.168.1.182"
+    ],
+    "username": "admin",
+    "start_time": "2025-07-04T00:07:37.137563",
+    "event_count": 120,
+    "log_sources": [
+      "Proxy",
+      "WindowsLog"
+    ],
+    "events": [
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 26934,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 68639673,
+        "username": "guest",
+        "payload": "<13>Jul 04 03:34:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 1054,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 60024557,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 00:56:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 25086,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 67183696,
+        "username": "guest",
+        "payload": "<13>Jul 04 05:24:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 55045,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 61137691,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:36:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 8840,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 66971139,
+        "username": "unknown",
+        "payload": "<13>Jul 04 06:25:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 40827,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 67519204,
+        "username": "admin",
+        "payload": "<13>Jul 04 00:51:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 19454,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 69733769,
+        "username": "unknown",
+        "payload": "<13>Jul 04 04:31:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 2664,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 68977336,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:35:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 11460,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 61014025,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:20:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 55527,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 62648970,
+        "username": "admin",
+        "payload": "<13>Jul 04 03:18:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 17167,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 68834231,
+        "username": "guest",
+        "payload": "<13>Jul 04 08:51:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.225",
+        "destination_ip": "192.168.1.182",
+        "source_port": 9378,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 69424528,
+        "username": "unknown",
+        "payload": "<13>Jul 04 02:13:37 Log Sample Port Scan from External Host from 10.0.1.225 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 24406,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 69815055,
+        "username": "root",
+        "payload": "<13>Jul 04 04:17:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 2021,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 64574757,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:08:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 49980,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 69328228,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 01:50:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 24541,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 67486484,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:30:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 59701,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 67009903,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 04:56:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 27637,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 66888937,
+        "username": "root",
+        "payload": "<13>Jul 04 06:28:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 30408,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 65251109,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:13:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 45911,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 61433779,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:45:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 32445,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 62244091,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 01:50:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 63746,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 62082573,
+        "username": "unknown",
+        "payload": "<13>Jul 04 04:43:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 29252,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 67691923,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:22:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.111",
+        "destination_ip": "192.168.1.182",
+        "source_port": 16606,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 67803507,
+        "username": "root",
+        "payload": "<13>Jul 04 08:08:37 Log Sample Port Scan from External Host from 10.0.2.111 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 41368,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 68333548,
+        "username": "unknown",
+        "payload": "<13>Jul 04 04:50:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 41691,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 67240842,
+        "username": "guest",
+        "payload": "<13>Jul 04 07:59:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 23753,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 69167765,
+        "username": "admin",
+        "payload": "<13>Jul 04 04:43:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 49885,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 61575839,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:17:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 7650,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 61120239,
+        "username": "unknown",
+        "payload": "<13>Jul 04 02:16:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 31233,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 67746852,
+        "username": "unknown",
+        "payload": "<13>Jul 04 06:00:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 24224,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 66928099,
+        "username": "admin",
+        "payload": "<13>Jul 04 02:41:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 8166,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 64772226,
+        "username": "admin",
+        "payload": "<13>Jul 04 06:17:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 25589,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 61630452,
+        "username": "guest",
+        "payload": "<13>Jul 04 04:51:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 59658,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 61732672,
+        "username": "root",
+        "payload": "<13>Jul 04 08:47:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 24200,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 67363008,
+        "username": "guest",
+        "payload": "<13>Jul 04 07:20:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.3.234",
+        "destination_ip": "192.168.1.182",
+        "source_port": 44588,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 61693111,
+        "username": "root",
+        "payload": "<13>Jul 04 02:59:37 Log Sample Port Scan from External Host from 10.0.3.234 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 62733,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 68927591,
+        "username": "root",
+        "payload": "<13>Jul 04 08:55:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 11737,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 61513525,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 06:41:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 37893,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 65628733,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 01:41:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 9607,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 68017908,
+        "username": "admin",
+        "payload": "<13>Jul 04 05:42:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 13513,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 68245766,
+        "username": "root",
+        "payload": "<13>Jul 04 08:26:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 51568,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 64049276,
+        "username": "guest",
+        "payload": "<13>Jul 04 05:03:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 62792,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 60211317,
+        "username": "root",
+        "payload": "<13>Jul 04 06:44:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 17912,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 64993698,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:35:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 17097,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 60569974,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 07:10:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 53066,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 62087747,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 07:05:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 37364,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 67542170,
+        "username": "guest",
+        "payload": "<13>Jul 04 07:59:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.84",
+        "destination_ip": "192.168.1.182",
+        "source_port": 42171,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 63416843,
+        "username": "guest",
+        "payload": "<13>Jul 04 06:43:37 Log Sample Port Scan from External Host from 10.0.1.84 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 42428,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 63845228,
+        "username": "guest",
+        "payload": "<13>Jul 04 08:45:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 26811,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 61973982,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:34:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 64625,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 69210819,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:25:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 47380,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 63669211,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:46:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 59379,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 61105340,
+        "username": "unknown",
+        "payload": "<13>Jul 04 04:56:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 24829,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 68032701,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 05:58:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 25857,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 60279950,
+        "username": "unknown",
+        "payload": "<13>Jul 04 02:11:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 34708,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 69488274,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:55:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 49459,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 64130306,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:39:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 20350,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 65220528,
+        "username": "unknown",
+        "payload": "<13>Jul 04 02:03:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 2122,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 64330696,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 09:04:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.154",
+        "destination_ip": "192.168.1.182",
+        "source_port": 39773,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 62816714,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 04:59:37 Log Sample Port Scan from External Host from 10.0.2.154 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 33569,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 60001644,
+        "username": "admin",
+        "payload": "<13>Jul 04 07:16:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 43393,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 69486909,
+        "username": "guest",
+        "payload": "<13>Jul 04 08:46:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 39429,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 64788015,
+        "username": "root",
+        "payload": "<13>Jul 04 02:55:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 1545,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 63143423,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 08:24:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 27370,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 69863065,
+        "username": "admin",
+        "payload": "<13>Jul 04 01:24:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 59044,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 63966730,
+        "username": "root",
+        "payload": "<13>Jul 04 04:08:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 13641,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 62127865,
+        "username": "admin",
+        "payload": "<13>Jul 04 01:03:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 61001,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 69705456,
+        "username": "guest",
+        "payload": "<13>Jul 04 05:46:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 44770,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 65880346,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 06:43:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 57096,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 60461425,
+        "username": "root",
+        "payload": "<13>Jul 04 01:50:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 7086,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 64103824,
+        "username": "unknown",
+        "payload": "<13>Jul 04 00:57:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.98",
+        "destination_ip": "192.168.1.182",
+        "source_port": 30912,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 69590624,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 04:38:37 Log Sample Port Scan from External Host from 10.0.0.98 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 57842,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 62412362,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:36:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 28016,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 61950865,
+        "username": "admin",
+        "payload": "<13>Jul 04 01:16:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 22204,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 61699214,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:32:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 40303,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 62921288,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 07:08:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 50984,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 60233942,
+        "username": "admin",
+        "payload": "<13>Jul 04 07:21:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 30697,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 64513746,
+        "username": "unknown",
+        "payload": "<13>Jul 04 07:31:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 60104,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 68716587,
+        "username": "unknown",
+        "payload": "<13>Jul 04 04:59:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 30863,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 66110344,
+        "username": "unknown",
+        "payload": "<13>Jul 04 08:15:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 20074,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 68535712,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:25:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 46659,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 64443822,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:05:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 5793,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 64419443,
+        "username": "root",
+        "payload": "<13>Jul 04 02:32:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.233",
+        "destination_ip": "192.168.1.182",
+        "source_port": 22008,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 67304679,
+        "username": "root",
+        "payload": "<13>Jul 04 08:50:37 Log Sample Port Scan from External Host from 10.0.0.233 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 44159,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 61807745,
+        "username": "root",
+        "payload": "<13>Jul 04 03:15:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 51673,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 67836088,
+        "username": "guest",
+        "payload": "<13>Jul 04 08:19:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 54670,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 62170157,
+        "username": "guest",
+        "payload": "<13>Jul 04 07:32:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 32141,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 67350118,
+        "username": "root",
+        "payload": "<13>Jul 04 04:26:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 31732,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 65317558,
+        "username": "admin",
+        "payload": "<13>Jul 04 06:39:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 4446,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 68030528,
+        "username": "admin",
+        "payload": "<13>Jul 04 01:16:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 32897,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 60566176,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 04:57:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 47163,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 67602100,
+        "username": "root",
+        "payload": "<13>Jul 04 06:05:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 29925,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 61496133,
+        "username": "unknown",
+        "payload": "<13>Jul 04 01:19:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 21439,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 67718961,
+        "username": "root",
+        "payload": "<13>Jul 04 08:24:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 7323,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 68981927,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:48:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.1.100",
+        "destination_ip": "192.168.1.182",
+        "source_port": 39136,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 63857882,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:32:37 Log Sample Port Scan from External Host from 10.0.1.100 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 35051,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 64759504,
+        "username": "guest",
+        "payload": "<13>Jul 04 04:28:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 59384,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 60665796,
+        "username": "unknown",
+        "payload": "<13>Jul 04 08:02:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 29447,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 63648175,
+        "username": "unknown",
+        "payload": "<13>Jul 04 08:18:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 18365,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 63531555,
+        "username": "root",
+        "payload": "<13>Jul 04 04:26:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 39896,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 60281151,
+        "username": "unknown",
+        "payload": "<13>Jul 04 07:38:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 23546,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 67488905,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 06:37:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 8070,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 68539687,
+        "username": "admin",
+        "payload": "<13>Jul 04 04:49:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 27457,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 65137315,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:45:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 31049,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 61225609,
+        "username": "admin",
+        "payload": "<13>Jul 04 07:33:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 38445,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 68490559,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:56:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 5594,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 65274452,
+        "username": "root",
+        "payload": "<13>Jul 04 01:16:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.2.13",
+        "destination_ip": "192.168.1.182",
+        "source_port": 48851,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 68704430,
+        "username": "admin",
+        "payload": "<13>Jul 04 00:50:37 Log Sample Port Scan from External Host from 10.0.2.13 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 40403,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 68282519,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 05:15:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 26630,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 63849013,
+        "username": "root",
+        "payload": "<13>Jul 04 01:12:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 48695,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 61327992,
+        "username": "root",
+        "payload": "<13>Jul 04 00:52:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 52989,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 66132065,
+        "username": "guest",
+        "payload": "<13>Jul 04 08:02:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 18205,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 69104181,
+        "username": "root",
+        "payload": "<13>Jul 04 07:05:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 10141,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 65639341,
+        "username": "admin",
+        "payload": "<13>Jul 04 04:14:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 30440,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 62976880,
+        "username": "admin",
+        "payload": "<13>Jul 04 08:55:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 1665,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 68285017,
+        "username": "admin",
+        "payload": "<13>Jul 04 05:07:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 62383,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 68685749,
+        "username": "root",
+        "payload": "<13>Jul 04 06:16:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 2049,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 69332929,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:35:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 4966,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 66087048,
+        "username": "admin",
+        "payload": "<13>Jul 04 08:32:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      },
+      {
+        "event_type": "Port Scan from External Host",
+        "source_ip": "10.0.0.88",
+        "destination_ip": "192.168.1.182",
+        "source_port": 30592,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 60057837,
+        "username": "admin",
+        "payload": "<13>Jul 04 07:49:37 Log Sample Port Scan from External Host from 10.0.0.88 to 192.168.1.182"
+      }
+    ]
+  },
+  {
+    "offense_id": 1008,
+    "description": "Internal Host Scanning Multiple IPs",
+    "magnitude": 2,
+    "source_ips": [
+      "192.168.1.122"
+    ],
+    "destination_ips": [
+      "10.0.1.84",
+      "10.0.2.178",
+      "10.0.2.229",
+      "10.0.3.116",
+      "10.0.1.139",
+      "10.0.0.35",
+      "10.0.2.246",
+      "10.0.2.188",
+      "10.0.3.249",
+      "10.0.1.97"
+    ],
+    "username": "admin",
+    "start_time": "2025-07-02T17:07:37.139133",
+    "event_count": 150,
+    "log_sources": [
+      "Proxy",
+      "VPN"
+    ],
+    "events": [
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 60434,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 63059842,
+        "username": "admin",
+        "payload": "<13>Jul 04 04:22:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 52561,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 63063513,
+        "username": "root",
+        "payload": "<13>Jul 04 09:03:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 4581,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 68632243,
+        "username": "admin",
+        "payload": "<13>Jul 04 03:48:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 40944,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 69846530,
+        "username": "admin",
+        "payload": "<13>Jul 04 01:39:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 25320,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 64792427,
+        "username": "unknown",
+        "payload": "<13>Jul 04 04:49:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 61499,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 69026129,
+        "username": "root",
+        "payload": "<13>Jul 04 09:00:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 61513,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 61222342,
+        "username": "unknown",
+        "payload": "<13>Jul 04 07:54:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 1512,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 63136283,
+        "username": "unknown",
+        "payload": "<13>Jul 04 07:52:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 30203,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 63201222,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:50:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 2569,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 69171035,
+        "username": "admin",
+        "payload": "<13>Jul 04 05:37:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 47193,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 66269721,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:20:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 4896,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 68133999,
+        "username": "admin",
+        "payload": "<13>Jul 04 05:36:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 24934,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 62224890,
+        "username": "guest",
+        "payload": "<13>Jul 04 03:14:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 53270,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 68654372,
+        "username": "unknown",
+        "payload": "<13>Jul 04 08:25:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.249",
+        "source_port": 51669,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 62027946,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:04:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.249"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 16571,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 64142279,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:44:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 52195,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 67751226,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 03:42:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 32864,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 68517097,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 01:01:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 24270,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 67077975,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:51:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 38965,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 62670477,
+        "username": "unknown",
+        "payload": "<13>Jul 04 08:50:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 25724,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 68683101,
+        "username": "unknown",
+        "payload": "<13>Jul 04 02:24:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 57089,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 63637526,
+        "username": "admin",
+        "payload": "<13>Jul 04 08:04:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 64142,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 60404016,
+        "username": "root",
+        "payload": "<13>Jul 04 07:20:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 40006,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 69627405,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:53:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 18867,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 62046898,
+        "username": "guest",
+        "payload": "<13>Jul 04 08:03:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 57746,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 66710726,
+        "username": "root",
+        "payload": "<13>Jul 04 05:30:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 43629,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 65967417,
+        "username": "unknown",
+        "payload": "<13>Jul 04 08:45:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 6663,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 63555345,
+        "username": "unknown",
+        "payload": "<13>Jul 04 08:49:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 38347,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 61179066,
+        "username": "guest",
+        "payload": "<13>Jul 04 04:25:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.97",
+        "source_port": 7359,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 69659405,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 05:07:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.97"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 39301,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 63917044,
+        "username": "root",
+        "payload": "<13>Jul 04 08:39:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 4325,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 64682667,
+        "username": "unknown",
+        "payload": "<13>Jul 04 02:56:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 52578,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 69731788,
+        "username": "guest",
+        "payload": "<13>Jul 04 09:00:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 10803,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 65486189,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:08:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 41698,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 62867896,
+        "username": "unknown",
+        "payload": "<13>Jul 04 06:59:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 18285,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 69514204,
+        "username": "admin",
+        "payload": "<13>Jul 04 08:10:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 52587,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 63641443,
+        "username": "root",
+        "payload": "<13>Jul 04 08:05:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 23375,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 66687623,
+        "username": "unknown",
+        "payload": "<13>Jul 04 01:10:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 9918,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 62542557,
+        "username": "unknown",
+        "payload": "<13>Jul 04 06:24:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 56008,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 68051553,
+        "username": "admin",
+        "payload": "<13>Jul 04 03:35:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 28082,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 67295427,
+        "username": "root",
+        "payload": "<13>Jul 04 06:35:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 23104,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 60379214,
+        "username": "unknown",
+        "payload": "<13>Jul 04 02:21:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 11739,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 60052878,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:44:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 16684,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 60407180,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:18:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.84",
+        "source_port": 32154,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 66678448,
+        "username": "root",
+        "payload": "<13>Jul 04 03:03:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.84"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 6367,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 60799142,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 03:09:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 23199,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 65794433,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 09:02:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 63514,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 60131572,
+        "username": "admin",
+        "payload": "<13>Jul 04 00:52:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 17420,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 64916110,
+        "username": "guest",
+        "payload": "<13>Jul 04 04:51:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 39046,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 69465889,
+        "username": "guest",
+        "payload": "<13>Jul 04 04:01:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 52111,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 63208471,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:08:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 43049,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 66370945,
+        "username": "admin",
+        "payload": "<13>Jul 04 07:51:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 8020,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 69111153,
+        "username": "admin",
+        "payload": "<13>Jul 04 05:13:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 11455,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 66728207,
+        "username": "unknown",
+        "payload": "<13>Jul 04 07:21:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 44345,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 67462137,
+        "username": "guest",
+        "payload": "<13>Jul 04 06:08:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 62210,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 60435907,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 01:25:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 49632,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 60096844,
+        "username": "root",
+        "payload": "<13>Jul 04 07:53:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 40841,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 67201990,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:56:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 49060,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 67781151,
+        "username": "root",
+        "payload": "<13>Jul 04 04:24:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.229",
+        "source_port": 52204,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 64587610,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 03:32:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.229"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 50908,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 64186377,
+        "username": "unknown",
+        "payload": "<13>Jul 04 07:10:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 41847,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 65218393,
+        "username": "unknown",
+        "payload": "<13>Jul 04 07:37:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 35906,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 69685174,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 04:00:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 47844,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 63227546,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 01:00:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 13321,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 69461934,
+        "username": "guest",
+        "payload": "<13>Jul 04 00:50:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 47983,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 64180994,
+        "username": "root",
+        "payload": "<13>Jul 04 07:56:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 4796,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 60777390,
+        "username": "root",
+        "payload": "<13>Jul 04 05:08:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 14605,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 62736078,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:14:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 23674,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 61099986,
+        "username": "root",
+        "payload": "<13>Jul 04 02:12:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 32809,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 60403636,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:10:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 2465,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 68275534,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:22:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 29537,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 68822077,
+        "username": "root",
+        "payload": "<13>Jul 04 02:53:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 27227,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 64622438,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:50:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 18442,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 69067987,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:49:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.178",
+        "source_port": 55556,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 65576897,
+        "username": "guest",
+        "payload": "<13>Jul 04 06:59:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.178"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 24203,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 68424392,
+        "username": "guest",
+        "payload": "<13>Jul 04 04:26:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 55833,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 61161082,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 05:21:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 7685,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 60741697,
+        "username": "root",
+        "payload": "<13>Jul 04 04:31:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 5878,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 66196773,
+        "username": "root",
+        "payload": "<13>Jul 04 03:50:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 31057,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 64449489,
+        "username": "root",
+        "payload": "<13>Jul 04 01:16:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 52711,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 66998961,
+        "username": "unknown",
+        "payload": "<13>Jul 04 04:19:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 57655,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 64395895,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 03:49:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 48540,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 62329758,
+        "username": "root",
+        "payload": "<13>Jul 04 02:24:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 16633,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 67437746,
+        "username": "admin",
+        "payload": "<13>Jul 04 07:36:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 6089,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 66415623,
+        "username": "admin",
+        "payload": "<13>Jul 04 04:24:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 39253,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 68666780,
+        "username": "admin",
+        "payload": "<13>Jul 04 03:56:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 16727,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 64296495,
+        "username": "root",
+        "payload": "<13>Jul 04 06:08:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 26961,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 68543336,
+        "username": "guest",
+        "payload": "<13>Jul 04 04:17:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 48562,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 69439034,
+        "username": "root",
+        "payload": "<13>Jul 04 07:28:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.246",
+        "source_port": 23524,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 68285885,
+        "username": "root",
+        "payload": "<13>Jul 04 05:47:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.246"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 51818,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 63982656,
+        "username": "admin",
+        "payload": "<13>Jul 04 05:53:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 48093,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 62157331,
+        "username": "root",
+        "payload": "<13>Jul 04 06:54:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 19126,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 69304914,
+        "username": "root",
+        "payload": "<13>Jul 04 03:40:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 26326,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 65221081,
+        "username": "root",
+        "payload": "<13>Jul 04 04:06:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 55455,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 63551407,
+        "username": "admin",
+        "payload": "<13>Jul 04 01:22:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 11979,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 68835646,
+        "username": "root",
+        "payload": "<13>Jul 04 07:47:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 11382,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 68386029,
+        "username": "unknown",
+        "payload": "<13>Jul 04 07:32:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 50692,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 60982499,
+        "username": "admin",
+        "payload": "<13>Jul 04 05:52:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 17565,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 60168178,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 03:08:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 65098,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 60115823,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 05:23:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 38965,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 67835183,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:09:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 12020,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 69107178,
+        "username": "root",
+        "payload": "<13>Jul 04 07:58:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 50577,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 67607570,
+        "username": "unknown",
+        "payload": "<13>Jul 04 04:15:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 25206,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 64058533,
+        "username": "root",
+        "payload": "<13>Jul 04 03:46:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.3.116",
+        "source_port": 6104,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 65033253,
+        "username": "root",
+        "payload": "<13>Jul 04 07:27:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.3.116"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 51206,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 68486636,
+        "username": "root",
+        "payload": "<13>Jul 04 05:10:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 35897,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 67323665,
+        "username": "guest",
+        "payload": "<13>Jul 04 03:52:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 10934,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 60370259,
+        "username": "admin",
+        "payload": "<13>Jul 04 06:48:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 8116,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 60034445,
+        "username": "root",
+        "payload": "<13>Jul 04 02:41:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 37895,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 64554844,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:38:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 33581,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 69918787,
+        "username": "guest",
+        "payload": "<13>Jul 04 01:47:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 29420,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 62366283,
+        "username": "root",
+        "payload": "<13>Jul 04 02:21:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 48015,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 69963028,
+        "username": "root",
+        "payload": "<13>Jul 04 02:20:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 64386,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 65589686,
+        "username": "admin",
+        "payload": "<13>Jul 04 08:50:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 9055,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 69140836,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 00:59:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 9538,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 61561934,
+        "username": "guest",
+        "payload": "<13>Jul 04 08:10:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 57818,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 63245167,
+        "username": "unknown",
+        "payload": "<13>Jul 04 08:24:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 29925,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 61417441,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:10:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 39009,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 63960047,
+        "username": "root",
+        "payload": "<13>Jul 04 04:47:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.0.35",
+        "source_port": 40280,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 65200280,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:35:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.0.35"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 46708,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 62787528,
+        "username": "admin",
+        "payload": "<13>Jul 04 05:15:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 34604,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 69280857,
+        "username": "root",
+        "payload": "<13>Jul 04 02:34:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 62545,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 69171084,
+        "username": "root",
+        "payload": "<13>Jul 04 04:32:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 29198,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 69317522,
+        "username": "unknown",
+        "payload": "<13>Jul 04 06:51:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 65303,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 64360317,
+        "username": "admin",
+        "payload": "<13>Jul 04 04:17:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 29867,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 64147047,
+        "username": "root",
+        "payload": "<13>Jul 04 02:21:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 32033,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 66733291,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:12:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 59225,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 63647245,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 05:15:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 26073,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 60994905,
+        "username": "admin",
+        "payload": "<13>Jul 04 05:50:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 51197,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 66249426,
+        "username": "unknown",
+        "payload": "<13>Jul 04 01:31:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 57224,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 64819937,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 05:21:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 64511,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 66562392,
+        "username": "unknown",
+        "payload": "<13>Jul 04 03:03:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 52276,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 68232772,
+        "username": "guest",
+        "payload": "<13>Jul 04 00:52:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 31676,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 69018746,
+        "username": "root",
+        "payload": "<13>Jul 04 06:12:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.1.139",
+        "source_port": 30018,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 62373337,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 08:32:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.1.139"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 8102,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 63070886,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 04:34:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 48572,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 63110506,
+        "username": "root",
+        "payload": "<13>Jul 04 00:48:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 14134,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 64226414,
+        "username": "root",
+        "payload": "<13>Jul 04 07:01:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 14643,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 69407191,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 08:44:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 39466,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 65887054,
+        "username": "admin",
+        "payload": "<13>Jul 04 00:56:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 50481,
+        "destination_port": 3389,
+        "protocol": "TCP",
+        "qid": 61565528,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:33:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 45011,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 69607450,
+        "username": "admin",
+        "payload": "<13>Jul 04 08:10:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 30485,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 66892171,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:48:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 34419,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 69040267,
+        "username": "admin",
+        "payload": "<13>Jul 04 01:54:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 7980,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 63555860,
+        "username": "unknown",
+        "payload": "<13>Jul 04 01:46:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 62738,
+        "destination_port": 3389,
+        "protocol": "ICMP",
+        "qid": 69253462,
+        "username": "root",
+        "payload": "<13>Jul 04 06:22:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 39531,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 60472423,
+        "username": "unknown",
+        "payload": "<13>Jul 04 08:14:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 17633,
+        "destination_port": 53,
+        "protocol": "ICMP",
+        "qid": 61864278,
+        "username": "guest",
+        "payload": "<13>Jul 04 03:54:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 51468,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 60418678,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 09:00:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      },
+      {
+        "event_type": "Internal Host Scanning Multiple IPs",
+        "source_ip": "192.168.1.122",
+        "destination_ip": "10.0.2.188",
+        "source_port": 48562,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 65325940,
+        "username": "root",
+        "payload": "<13>Jul 04 09:00:37 Log Sample Internal Host Scanning Multiple IPs from 192.168.1.122 to 10.0.2.188"
+      }
+    ]
+  },
+  {
+    "offense_id": 1009,
+    "description": "Web Shell Upload Detected",
+    "magnitude": 4,
+    "source_ips": [
+      "10.0.0.40",
+      "10.0.0.202",
+      "10.0.3.108"
+    ],
+    "destination_ips": [
+      "192.168.1.35"
+    ],
+    "username": "unknown",
+    "start_time": "2025-07-04T08:07:37.139191",
+    "event_count": 3,
+    "log_sources": [
+      "Proxy",
+      "IDS"
+    ],
+    "events": [
+      {
+        "event_type": "Web Shell Upload Detected",
+        "source_ip": "10.0.0.40",
+        "destination_ip": "192.168.1.35",
+        "source_port": 26824,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 60532190,
+        "username": "guest",
+        "payload": "<13>Jul 04 08:03:37 Log Sample Web Shell Upload Detected from 10.0.0.40 to 192.168.1.35"
+      },
+      {
+        "event_type": "Web Shell Upload Detected",
+        "source_ip": "10.0.3.108",
+        "destination_ip": "192.168.1.35",
+        "source_port": 35324,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 64900766,
+        "username": "guest",
+        "payload": "<13>Jul 04 02:58:37 Log Sample Web Shell Upload Detected from 10.0.3.108 to 192.168.1.35"
+      },
+      {
+        "event_type": "Web Shell Upload Detected",
+        "source_ip": "10.0.0.202",
+        "destination_ip": "192.168.1.35",
+        "source_port": 60172,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 66130734,
+        "username": "unknown",
+        "payload": "<13>Jul 04 05:03:37 Log Sample Web Shell Upload Detected from 10.0.0.202 to 192.168.1.35"
+      }
+    ]
+  },
+  {
+    "offense_id": 1010,
+    "description": "Ransomware Encryption Activity",
+    "magnitude": 3,
+    "source_ips": [
+      "192.168.1.19"
+    ],
+    "destination_ips": [
+      "10.0.1.166",
+      "10.0.2.211",
+      "10.0.2.62",
+      "10.0.3.229",
+      "10.0.3.113"
+    ],
+    "username": "user",
+    "start_time": "2025-07-04T05:07:37.139258",
+    "event_count": 5,
+    "log_sources": [
+      "VPN",
+      "Proxy"
+    ],
+    "events": [
+      {
+        "event_type": "Ransomware Encryption Activity",
+        "source_ip": "192.168.1.19",
+        "destination_ip": "10.0.2.62",
+        "source_port": 28528,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 63072427,
+        "username": "guest",
+        "payload": "<13>Jul 04 08:21:37 Log Sample Ransomware Encryption Activity from 192.168.1.19 to 10.0.2.62"
+      },
+      {
+        "event_type": "Ransomware Encryption Activity",
+        "source_ip": "192.168.1.19",
+        "destination_ip": "10.0.3.229",
+        "source_port": 39149,
+        "destination_port": 22,
+        "protocol": "UDP",
+        "qid": 61705920,
+        "username": "unknown",
+        "payload": "<13>Jul 04 07:38:37 Log Sample Ransomware Encryption Activity from 192.168.1.19 to 10.0.3.229"
+      },
+      {
+        "event_type": "Ransomware Encryption Activity",
+        "source_ip": "192.168.1.19",
+        "destination_ip": "10.0.1.166",
+        "source_port": 53080,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 66950278,
+        "username": "guest",
+        "payload": "<13>Jul 04 03:10:37 Log Sample Ransomware Encryption Activity from 192.168.1.19 to 10.0.1.166"
+      },
+      {
+        "event_type": "Ransomware Encryption Activity",
+        "source_ip": "192.168.1.19",
+        "destination_ip": "10.0.3.113",
+        "source_port": 9892,
+        "destination_port": 53,
+        "protocol": "TCP",
+        "qid": 61963758,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:26:37 Log Sample Ransomware Encryption Activity from 192.168.1.19 to 10.0.3.113"
+      },
+      {
+        "event_type": "Ransomware Encryption Activity",
+        "source_ip": "192.168.1.19",
+        "destination_ip": "10.0.2.211",
+        "source_port": 26546,
+        "destination_port": 53,
+        "protocol": "UDP",
+        "qid": 60137507,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 08:31:37 Log Sample Ransomware Encryption Activity from 192.168.1.19 to 10.0.2.211"
+      }
+    ]
+  },
+  {
+    "offense_id": 1011,
+    "description": "Privilege Escalation via Service Injection",
+    "magnitude": 4,
+    "source_ips": [
+      "10.0.0.143",
+      "10.0.3.174",
+      "10.0.1.11",
+      "10.0.1.244",
+      "10.0.3.147",
+      "10.0.2.1"
+    ],
+    "destination_ips": [
+      "192.168.1.231"
+    ],
+    "username": "user",
+    "start_time": "2025-07-04T05:07:37.139347",
+    "event_count": 6,
+    "log_sources": [
+      "Proxy",
+      "VPN"
+    ],
+    "events": [
+      {
+        "event_type": "Privilege Escalation via Service Injection",
+        "source_ip": "10.0.1.11",
+        "destination_ip": "192.168.1.231",
+        "source_port": 39679,
+        "destination_port": 443,
+        "protocol": "UDP",
+        "qid": 62498701,
+        "username": "guest",
+        "payload": "<13>Jul 04 07:20:37 Log Sample Privilege Escalation via Service Injection from 10.0.1.11 to 192.168.1.231"
+      },
+      {
+        "event_type": "Privilege Escalation via Service Injection",
+        "source_ip": "10.0.2.1",
+        "destination_ip": "192.168.1.231",
+        "source_port": 43327,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 65110749,
+        "username": "admin",
+        "payload": "<13>Jul 04 02:02:37 Log Sample Privilege Escalation via Service Injection from 10.0.2.1 to 192.168.1.231"
+      },
+      {
+        "event_type": "Privilege Escalation via Service Injection",
+        "source_ip": "10.0.3.147",
+        "destination_ip": "192.168.1.231",
+        "source_port": 13810,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 66984722,
+        "username": "guest",
+        "payload": "<13>Jul 04 04:08:37 Log Sample Privilege Escalation via Service Injection from 10.0.3.147 to 192.168.1.231"
+      },
+      {
+        "event_type": "Privilege Escalation via Service Injection",
+        "source_ip": "10.0.1.244",
+        "destination_ip": "192.168.1.231",
+        "source_port": 36870,
+        "destination_port": 3389,
+        "protocol": "UDP",
+        "qid": 69727907,
+        "username": "guest",
+        "payload": "<13>Jul 04 03:25:37 Log Sample Privilege Escalation via Service Injection from 10.0.1.244 to 192.168.1.231"
+      },
+      {
+        "event_type": "Privilege Escalation via Service Injection",
+        "source_ip": "10.0.3.174",
+        "destination_ip": "192.168.1.231",
+        "source_port": 18235,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 68024495,
+        "username": "guest",
+        "payload": "<13>Jul 04 09:04:37 Log Sample Privilege Escalation via Service Injection from 10.0.3.174 to 192.168.1.231"
+      },
+      {
+        "event_type": "Privilege Escalation via Service Injection",
+        "source_ip": "10.0.0.143",
+        "destination_ip": "192.168.1.231",
+        "source_port": 55937,
+        "destination_port": 443,
+        "protocol": "TCP",
+        "qid": 64562314,
+        "username": "guest",
+        "payload": "<13>Jul 04 05:50:37 Log Sample Privilege Escalation via Service Injection from 10.0.0.143 to 192.168.1.231"
+      }
+    ]
+  },
+  {
+    "offense_id": 1012,
+    "description": "Cloud Storage Misconfiguration (S3 Bucket Open)",
+    "magnitude": 9,
+    "source_ips": [
+      "192.168.1.253"
+    ],
+    "destination_ips": [
+      "10.0.0.56",
+      "10.0.2.143"
+    ],
+    "username": "admin",
+    "start_time": "2025-07-03T17:07:37.139383",
+    "event_count": 2,
+    "log_sources": [
+      "VPN",
+      "LinuxAudit"
+    ],
+    "events": [
+      {
+        "event_type": "Cloud Storage Misconfiguration (S3 Bucket Open)",
+        "source_ip": "192.168.1.253",
+        "destination_ip": "10.0.2.143",
+        "source_port": 14793,
+        "destination_port": 80,
+        "protocol": "UDP",
+        "qid": 65817177,
+        "username": "unknown",
+        "payload": "<13>Jul 04 06:55:37 Log Sample Cloud Storage Misconfiguration (S3 Bucket Open) from 192.168.1.253 to 10.0.2.143"
+      },
+      {
+        "event_type": "Cloud Storage Misconfiguration (S3 Bucket Open)",
+        "source_ip": "192.168.1.253",
+        "destination_ip": "10.0.0.56",
+        "source_port": 62846,
+        "destination_port": 80,
+        "protocol": "TCP",
+        "qid": 62792510,
+        "username": "admin",
+        "payload": "<13>Jul 04 08:34:37 Log Sample Cloud Storage Misconfiguration (S3 Bucket Open) from 192.168.1.253 to 10.0.0.56"
+      }
+    ]
+  },
+  {
+    "offense_id": 1013,
+    "description": "Abnormal Software Installation via Package Manager",
+    "magnitude": 10,
+    "source_ips": [
+      "10.0.2.52",
+      "10.0.2.181",
+      "10.0.3.96",
+      "10.0.1.44"
+    ],
+    "destination_ips": [
+      "192.168.1.65"
+    ],
+    "username": "user",
+    "start_time": "2025-07-03T05:07:37.139436",
+    "event_count": 4,
+    "log_sources": [
+      "LinuxAudit",
+      "VPN"
+    ],
+    "events": [
+      {
+        "event_type": "Abnormal Software Installation via Package Manager",
+        "source_ip": "10.0.3.96",
+        "destination_ip": "192.168.1.65",
+        "source_port": 30731,
+        "destination_port": 80,
+        "protocol": "ICMP",
+        "qid": 64043246,
+        "username": "root",
+        "payload": "<13>Jul 04 06:44:37 Log Sample Abnormal Software Installation via Package Manager from 10.0.3.96 to 192.168.1.65"
+      },
+      {
+        "event_type": "Abnormal Software Installation via Package Manager",
+        "source_ip": "10.0.1.44",
+        "destination_ip": "192.168.1.65",
+        "source_port": 20776,
+        "destination_port": 443,
+        "protocol": "ICMP",
+        "qid": 69548453,
+        "username": "SYSTEM",
+        "payload": "<13>Jul 04 02:02:37 Log Sample Abnormal Software Installation via Package Manager from 10.0.1.44 to 192.168.1.65"
+      },
+      {
+        "event_type": "Abnormal Software Installation via Package Manager",
+        "source_ip": "10.0.2.181",
+        "destination_ip": "192.168.1.65",
+        "source_port": 32943,
+        "destination_port": 22,
+        "protocol": "TCP",
+        "qid": 60028129,
+        "username": "admin",
+        "payload": "<13>Jul 04 06:57:37 Log Sample Abnormal Software Installation via Package Manager from 10.0.2.181 to 192.168.1.65"
+      },
+      {
+        "event_type": "Abnormal Software Installation via Package Manager",
+        "source_ip": "10.0.2.52",
+        "destination_ip": "192.168.1.65",
+        "source_port": 9548,
+        "destination_port": 22,
+        "protocol": "ICMP",
+        "qid": 69242725,
+        "username": "admin",
+        "payload": "<13>Jul 04 05:20:37 Log Sample Abnormal Software Installation via Package Manager from 10.0.2.52 to 192.168.1.65"
+      }
+    ]
+  }
+]
