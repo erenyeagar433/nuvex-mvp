@@ -1,0 +1,257 @@
+[
+  {
+    "memory_id": "MEM-1000",
+    "offense_id": 464806,
+    "description": "Simulated offense: Command Injection detected in internal network",
+    "source_ip": "192.168.175.5",
+    "destination_ip": "10.10.76.230",
+    "username": "admin",
+    "log_source": "Firewall-5",
+    "event_name": "File Uploaded",
+    "payload": "Sample payload indicating cloud misconfig activity...",
+    "tags": [
+      "dns_tunneling",
+      "policy_violation"
+    ],
+    "closed_comment": "Marked resolved after internal investigation.",
+    "timestamp": "2024-12-09 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1001",
+    "offense_id": 361441,
+    "description": "Simulated offense: Suspicious Login detected in internal network",
+    "source_ip": "192.168.17.252",
+    "destination_ip": "10.10.224.226",
+    "username": "admin",
+    "log_source": "Firewall-2",
+    "event_name": "File Uploaded",
+    "payload": "Sample payload indicating suspicious login activity...",
+    "tags": [
+      "port_scan",
+      "unusual_traffic"
+    ],
+    "closed_comment": "Blocked IP after correlation.",
+    "timestamp": "2024-10-30 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1002",
+    "offense_id": 239350,
+    "description": "Simulated offense: Unusual Traffic detected in internal network",
+    "source_ip": "192.168.183.188",
+    "destination_ip": "10.10.197.230",
+    "username": "admin",
+    "log_source": "Firewall-4",
+    "event_name": "Traffic Denied",
+    "payload": "Sample payload indicating unusual traffic activity...",
+    "tags": [
+      "unauthorized_access",
+      "command_injection"
+    ],
+    "closed_comment": "Marked resolved after internal investigation.",
+    "timestamp": "2024-08-31 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1003",
+    "offense_id": 270185,
+    "description": "Simulated offense: Malware detected in internal network",
+    "source_ip": "192.168.22.75",
+    "destination_ip": "10.10.136.183",
+    "username": "Unknown",
+    "log_source": "Firewall-1",
+    "event_name": "Login Failure",
+    "payload": "Sample payload indicating unauthorized access activity...",
+    "tags": [
+      "file_upload",
+      "malware"
+    ],
+    "closed_comment": "Confirmed as legitimate admin activity.",
+    "timestamp": "2025-05-27 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1004",
+    "offense_id": 993479,
+    "description": "Simulated offense: Malware detected in internal network",
+    "source_ip": "192.168.24.57",
+    "destination_ip": "10.10.42.219",
+    "username": "Unknown",
+    "log_source": "Firewall-5",
+    "event_name": "Login Failure",
+    "payload": "Sample payload indicating brute force activity...",
+    "tags": [
+      "command_injection",
+      "dns_tunneling"
+    ],
+    "closed_comment": "False positive due to scanning tool.",
+    "timestamp": "2024-09-28 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1005",
+    "offense_id": 450105,
+    "description": "Simulated offense: Data Exfiltration detected in internal network",
+    "source_ip": "192.168.173.29",
+    "destination_ip": "10.10.180.129",
+    "username": "testuser",
+    "log_source": "Firewall-2",
+    "event_name": "Command Execution",
+    "payload": "Sample payload indicating privilege escalation activity...",
+    "tags": [
+      "data_exfiltration",
+      "cloud_misconfig"
+    ],
+    "closed_comment": "Raised to L2 for further triage.",
+    "timestamp": "2025-05-17 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1006",
+    "offense_id": 790432,
+    "description": "Simulated offense: Suspicious Login detected in internal network",
+    "source_ip": "192.168.150.206",
+    "destination_ip": "10.10.56.132",
+    "username": "Unknown",
+    "log_source": "Firewall-2",
+    "event_name": "Command Execution",
+    "payload": "Sample payload indicating file upload activity...",
+    "tags": [
+      "unauthorized_access",
+      "dns_tunneling"
+    ],
+    "closed_comment": "Raised to L2 for further triage.",
+    "timestamp": "2024-10-29 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1007",
+    "offense_id": 655833,
+    "description": "Simulated offense: Privilege Escalation detected in internal network",
+    "source_ip": "192.168.14.178",
+    "destination_ip": "10.10.125.56",
+    "username": "Unknown",
+    "log_source": "Firewall-1",
+    "event_name": "Traffic Denied",
+    "payload": "Sample payload indicating dns tunneling activity...",
+    "tags": [
+      "policy_violation",
+      "dns_tunneling"
+    ],
+    "closed_comment": "Raised to L2 for further triage.",
+    "timestamp": "2025-03-11 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1008",
+    "offense_id": 899006,
+    "description": "Simulated offense: Port Scan detected in internal network",
+    "source_ip": "192.168.57.251",
+    "destination_ip": "10.10.198.59",
+    "username": "Unknown",
+    "log_source": "Firewall-2",
+    "event_name": "Traffic Denied",
+    "payload": "Sample payload indicating privilege escalation activity...",
+    "tags": [
+      "malware",
+      "file_upload"
+    ],
+    "closed_comment": "Blocked IP after correlation.",
+    "timestamp": "2024-08-04 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1009",
+    "offense_id": 751866,
+    "description": "Simulated offense: Unauthorized Access detected in internal network",
+    "source_ip": "192.168.175.117",
+    "destination_ip": "10.10.11.73",
+    "username": "admin",
+    "log_source": "Firewall-4",
+    "event_name": "Command Execution",
+    "payload": "Sample payload indicating command injection activity...",
+    "tags": [
+      "cloud_misconfig",
+      "file_upload"
+    ],
+    "closed_comment": "Marked resolved after internal investigation.",
+    "timestamp": "2024-08-11 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1010",
+    "offense_id": 306074,
+    "description": "Simulated offense: Brute Force detected in internal network",
+    "source_ip": "192.168.50.221",
+    "destination_ip": "10.10.99.166",
+    "username": "Unknown",
+    "log_source": "Firewall-4",
+    "event_name": "Command Execution",
+    "payload": "Sample payload indicating suspicious login activity...",
+    "tags": [
+      "data_exfiltration",
+      "command_injection"
+    ],
+    "closed_comment": "Blocked IP after correlation.",
+    "timestamp": "2025-01-11 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1011",
+    "offense_id": 128760,
+    "description": "Simulated offense: Data Exfiltration detected in internal network",
+    "source_ip": "192.168.199.21",
+    "destination_ip": "10.10.204.11",
+    "username": "testuser",
+    "log_source": "Firewall-2",
+    "event_name": "Traffic Denied",
+    "payload": "Sample payload indicating suspicious login activity...",
+    "tags": [
+      "unauthorized_access",
+      "policy_violation"
+    ],
+    "closed_comment": "False positive due to scanning tool.",
+    "timestamp": "2024-11-10 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1012",
+    "offense_id": 150550,
+    "description": "Simulated offense: Dns Tunneling detected in internal network",
+    "source_ip": "192.168.103.11",
+    "destination_ip": "10.10.183.25",
+    "username": "Unknown",
+    "log_source": "Firewall-4",
+    "event_name": "Login Failure",
+    "payload": "Sample payload indicating unauthorized access activity...",
+    "tags": [
+      "file_upload",
+      "unauthorized_access"
+    ],
+    "closed_comment": "Raised to L2 for further triage.",
+    "timestamp": "2025-03-16 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1013",
+    "offense_id": 444703,
+    "description": "Simulated offense: Malware detected in internal network",
+    "source_ip": "192.168.83.102",
+    "destination_ip": "10.10.55.159",
+    "username": "Unknown",
+    "log_source": "Firewall-5",
+    "event_name": "Traffic Denied",
+    "payload": "Sample payload indicating privilege escalation activity...",
+    "tags": [
+      "port_scan",
+      "policy_violation"
+    ],
+    "closed_comment": "Raised to L2 for further triage.",
+    "timestamp": "2024-11-07 16:16:43"
+  },
+  {
+    "memory_id": "MEM-1014",
+    "offense_id": 536134,
+    "description": "Simulated offense: Port Scan detected in internal network",
+    "source_ip": "192.168.152.81",
+    "destination_ip": "10.10.253.239",
+    "username": "testuser",
+    "log_source": "Firewall-2",
+    "event_name": "File Uploaded",
+    "payload": "Sample payload indicating unusual traffic activity...",
+    "tags": [
+      "suspicious_login",
+      "unusual_traffic"
+    ],
+    "closed_comment": "Confirmed as legitimate admin activity.",
+    "timestamp": "2024-07-23 16:16:43"
+  }
+]
