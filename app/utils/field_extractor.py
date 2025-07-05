@@ -1,4 +1,3 @@
-# nuvex-mvp/app/utils/field_extractor.py
 import datetime
 
 def extract_fields(offense: dict) -> dict:
@@ -22,7 +21,9 @@ def _extract_sample_events(events):
             "name": e.get("event_name"),
             "category": e.get("low_level_category"),
             "action": e.get("action"),
-            "payload": e.get("payload")
+            "payload": e.get("payload"),
+            "source_ip": e.get("source_ip"),
+            "destination_ip": e.get("destination_ip"),
         } for e in events[:5]
     ]
 
