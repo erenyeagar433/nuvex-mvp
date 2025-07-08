@@ -1,0 +1,212 @@
+[
+  {
+    "description": "Simulated offense: Reconnaissance activity detected",
+    "source_ips": [
+      "192.168.23.13"
+    ],
+    "destination_ips": [
+      "10.0.199.136"
+    ],
+    "log_source": "HDC-PA-FW-PRI",
+    "tags": [
+      "Reconnaissance",
+      "Data Exfiltration"
+    ]
+  },
+  {
+    "description": "Simulated offense: Cloud Misconfig activity detected",
+    "source_ips": [
+      "192.168.175.252"
+    ],
+    "destination_ips": [
+      "10.0.241.238"
+    ],
+    "log_source": "SIEM-LOG",
+    "tags": [
+      "Malware",
+      "Cloud Misconfig"
+    ]
+  },
+  {
+    "description": "Simulated offense: Suspicious Login activity detected",
+    "source_ips": [
+      "192.168.19.71"
+    ],
+    "destination_ips": [
+      "10.0.63.15"
+    ],
+    "log_source": "HDC-PA-FW-PRI",
+    "tags": [
+      "Malware",
+      "Phishing"
+    ]
+  },
+  {
+    "description": "Simulated offense: Malware activity detected",
+    "source_ips": [
+      "192.168.182.21"
+    ],
+    "destination_ips": [
+      "10.0.206.68"
+    ],
+    "log_source": "WIN-AD-01",
+    "tags": [
+      "Suspicious Login",
+      "Phishing"
+    ]
+  },
+  {
+    "description": "Simulated offense: Firewall Rule Violation activity detected",
+    "source_ips": [
+      "192.168.247.231"
+    ],
+    "destination_ips": [
+      "10.0.31.164"
+    ],
+    "log_source": "SIEM-LOG",
+    "tags": [
+      "Data Exfiltration",
+      "Firewall Rule Violation"
+    ]
+  },
+  {
+    "description": "Simulated offense: Data Exfiltration activity detected",
+    "source_ips": [
+      "192.168.87.76"
+    ],
+    "destination_ips": [
+      "10.0.92.130"
+    ],
+    "log_source": "WEB-PROXY",
+    "tags": [
+      "Suspicious Login",
+      "Anomalous Behavior"
+    ]
+  },
+  {
+    "description": "Simulated offense: Reconnaissance activity detected",
+    "source_ips": [
+      "192.168.151.102"
+    ],
+    "destination_ips": [
+      "10.0.141.27"
+    ],
+    "log_source": "WIN-AD-01",
+    "tags": [
+      "Firewall Rule Violation",
+      "Port Scan"
+    ]
+  },
+  {
+    "description": "Simulated offense: Privilege Escalation activity detected",
+    "source_ips": [
+      "192.168.220.209"
+    ],
+    "destination_ips": [
+      "10.0.191.183"
+    ],
+    "log_source": "VPN-GW",
+    "tags": [
+      "Data Exfiltration",
+      "Unauthorized Access"
+    ]
+  },
+  {
+    "description": "Simulated offense: Anomalous Behavior activity detected",
+    "source_ips": [
+      "192.168.215.162"
+    ],
+    "destination_ips": [
+      "10.0.56.162"
+    ],
+    "log_source": "VPN-GW",
+    "tags": [
+      "Anomalous Behavior",
+      "Unauthorized Access"
+    ]
+  },
+  {
+    "description": "Simulated offense: Data Exfiltration activity detected",
+    "source_ips": [
+      "192.168.115.190"
+    ],
+    "destination_ips": [
+      "10.0.252.25"
+    ],
+    "log_source": "VPN-GW",
+    "tags": [
+      "Data Exfiltration",
+      "Unauthorized Access"
+    ]
+  },
+  {
+    "description": "Simulated offense: Data Exfiltration activity detected",
+    "source_ips": [
+      "192.168.201.137"
+    ],
+    "destination_ips": [
+      "10.0.213.181"
+    ],
+    "log_source": "SIEM-LOG",
+    "tags": [
+      "Data Exfiltration",
+      "Anomalous Behavior"
+    ]
+  },
+  {
+    "description": "Simulated offense: Brute Force activity detected",
+    "source_ips": [
+      "192.168.159.197"
+    ],
+    "destination_ips": [
+      "10.0.31.99"
+    ],
+    "log_source": "VPN-GW",
+    "tags": [
+      "Port Scan",
+      "Anomalous Behavior"
+    ]
+  },
+  {
+    "description": "Simulated offense: Data Exfiltration activity detected",
+    "source_ips": [
+      "192.168.90.6"
+    ],
+    "destination_ips": [
+      "10.0.88.207"
+    ],
+    "log_source": "SIEM-LOG",
+    "tags": [
+      "Cloud Misconfig",
+      "Phishing"
+    ]
+  },
+  {
+    "description": "Simulated offense: Cloud Misconfig activity detected",
+    "source_ips": [
+      "192.168.144.169"
+    ],
+    "destination_ips": [
+      "10.0.139.29"
+    ],
+    "log_source": "S3-AUDIT-LOG",
+    "tags": [
+      "Anomalous Behavior",
+      "Reconnaissance"
+    ]
+  },
+  {
+    "description": "Simulated offense: Privilege Escalation activity detected",
+    "source_ips": [
+      "192.168.61.71"
+    ],
+    "destination_ips": [
+      "10.0.168.160"
+    ],
+    "log_source": "WEB-PROXY",
+    "tags": [
+      "Malware",
+      "Port Scan"
+    ]
+  }
+]
