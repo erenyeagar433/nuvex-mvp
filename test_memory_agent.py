@@ -1,20 +1,23 @@
-from app.agents.memory_agent import find_similar_cases
+# tests/test_memory_agent.py
 
-# Dummy test offense (copying one of your offense samples)
-test_offense = {
-    "description": "SSH Brute Force Detected",
-    "source_ips": ["185.6.233.20"],
-    "destination_ips": ["10.0.0.5"],
-    "log_sources": ["Firewall-1"]
-}
+from app.agents.memory_agent import MemoryAgent
 
-similar_cases = find_similar_cases(test_offense, top_k=3)
+def test_memory_lookup():
+    agent = MemoryAgent(db_path="dummy_data/memory_base.json")
+    query = {
+        "description": "Inbound connection from remote IP to multiple local IPs",
+        "source_ips": ["20.64.104.142"],
+        "destination_ips": ["202.52.44.1", "202.52.44.100"],
+        "log_sources": ["HDC-PA-FW-PRI"]
+    }
 
-print("=== Top Similar Offenses ===")
-for i, case in enumerate(similar_cases, 1):
-    print(f"\n[{i}] Description: {case['description']}")
-    print(f"    Source IPs: {case['source_ips']}")
-    print(f"    Dest IPs: {case['destination_ips']}")
-    print(f"    Log Source: {case['log_source']}")
-    print(f"    Tags: {case.get('tags', [])}")
-    print(f"    Similarity Score: {case['similarity_score']}")
+    results = agent.search_similar_offenses(query, top_k=3)
+    print("\n--- Top Matches ---")
+    for i, res in enumerate(results, 1):
+        print(f"\n[{i}]")
+        print("Score:", res["score"])
+        print("Description:", res["offense"]["description"])
+        print("Comment:", res["offense"].get("comment", "No comment"))
+
+if __name__ == "__main__":
+    test_memory_lookup()
