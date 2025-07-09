@@ -1,9 +1,13 @@
-# nuvex-mvp/app/agents/offense_analyzer.py
+# app/agents/offense_analyzer.py
 
-def analyze_offense(offense_data: dict) -> dict:
+from app.utils.reputation import get_reputation
+from app.agents.memory_agent import find_similar_cases
+from app.agents.log_query_agent import generate_log_instructions
+
+
+def analyze_behavior(offense_data: dict) -> dict:
     """
-    Takes extracted offense fields and returns a summarized interpretation
-    of the offense behavior for further decision making.
+    Original L1-style behavior analysis based on IP patterns and log types.
     """
     magnitude = offense_data.get("magnitude", 0)
     source_ips = offense_data.get("source_ips", [])
@@ -39,4 +43,42 @@ def analyze_offense(offense_data: dict) -> dict:
         "magnitude": magnitude,
         "event_count": event_count,
         "summary": summary
+    }
+
+
+def analyze_offense(offense_data: dict) -> dict:
+    """
+    Main analyzer agent: combines behavior analysis, reputation, memory lookup,
+    and dynamic log request generation.
+    """
+    # Step 1: Behavioral summary
+    behavior_summary = analyze_behavior(offense_data)
+
+    # Step 2: Extract IOCs and perform reputation lookup
+    iocs = offense_data.get("source_ips", []) + offense_data.get("destination_ips", [])
+    reputation_results = get_reputation(iocs)
+
+    # Step 3: Find similar past offenses
+    similar_cases = find_similar_cases(offense_data, top_k=3)
+
+    # Step 4: Decision logic (placeholder logic)
+    if any(r.get("malicious_votes", 0) > 1 or r.get("abuse_confidence", 0) > 50 for r in reputation_results):
+        decision = "escalate"
+    elif similar_cases and all("Data Exfiltration" in c.get("tags", []) for c in similar_cases):
+        decision = "escalate"
+    else:
+        decision = "false_positive"
+
+    # Step 5: If escalated, generate log query instructions
+    log_request = generate_log_instructions(offense_data) if decision == "escalate" else None
+
+    return {
+        "summary": behavior_summary["summary"],
+        "pattern": behavior_summary["pattern"],
+        "behavior": behavior_summary["behavior"],
+        "log_types": behavior_summary["log_types"],
+        "reputation": reputation_results,
+        "similar_cases": similar_cases,
+        "decision": decision,
+        "log_request": log_request
     }
