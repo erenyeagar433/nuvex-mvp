@@ -1,2 +1,15 @@
+# Core
 chromadb
 sentence-transformers
+
+# For OpenAI API
+openai
+
+# For Google Gemini API (via Vertex AI SDK)
+google-generativeai
+
+# Load environment variables
+python-dotenv
+
+# HTTP requests for AbuseIPDB and VirusTotal
+requests
