@@ -61,16 +61,22 @@ def analyze_offense(offense_data: dict) -> dict:
     # Step 3: Find similar past offenses
     similar_cases = find_similar_cases(offense_data, top_k=3)
 
-    # Step 4: Decision logic (placeholder logic)
+    # Step 4: Decision logic with reason
     if any(r.get("malicious_votes", 0) > 1 or r.get("abuse_confidence", 0) > 50 for r in reputation_results):
         decision = "escalate"
+        reason = "High malicious votes or abuse confidence in IOC reputation"
     elif similar_cases and all("Data Exfiltration" in c.get("tags", []) for c in similar_cases):
         decision = "escalate"
+        reason = "All similar cases tagged as Data Exfiltration"
     else:
         decision = "false_positive"
+        reason = "No strong IOC or past pattern match"
 
     # Step 5: If escalated, generate log query instructions
-    log_request = generate_log_instructions(offense_data) if decision == "escalate" else None
+    log_request = (
+        generate_log_instructions(behavior_summary["summary"], offense_data)
+        if decision == "escalate" else None
+    )
 
     return {
         "summary": behavior_summary["summary"],
@@ -80,5 +86,6 @@ def analyze_offense(offense_data: dict) -> dict:
         "reputation": reputation_results,
         "similar_cases": similar_cases,
         "decision": decision,
+        "reason": reason,
         "log_request": log_request
     }
