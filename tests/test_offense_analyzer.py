@@ -4,9 +4,13 @@ from app.agents.offense_analyzer import analyze_offense
 
 def test_analyze_offense_sample():
     sample_offense = {
+        "description": "Multiple connections from a single IP to internal network",
         "magnitude": 6,
         "source_ips": ["8.8.8.8"],
-        "destination_ips": ["192.168.1.10", "192.168.1.11", "192.168.1.12", "192.168.1.13", "192.168.1.14", "192.168.1.15"],
+        "destination_ips": [
+            "192.168.1.10", "192.168.1.11", "192.168.1.12",
+            "192.168.1.13", "192.168.1.14", "192.168.1.15"
+        ],
         "log_sources": ["FIREWALL"],
         "event_count": 20,
         "events": [
