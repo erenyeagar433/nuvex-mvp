@@ -1,11 +1,6 @@
 # app/agents/log_query_agent.py
 
-import os
-import openai
-from dotenv import load_dotenv
-load_dotenv()
-
-openai.api_key = os.getenv("OPENAI_API_KEY")
+from app.agents.model_router import generate_dynamic_prompt
 
 def generate_log_instructions(offense_summary: str, offense_details: dict) -> str:
     prompt = f"""
@@ -17,17 +12,6 @@ Offense Summary:
 Offense Details:
 {offense_details}
 
-Respond with actionable steps in plain text.
+Respond with clear and actionable steps in bullet points.
 """
-
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[
-            {"role": "system", "content": "You are a cybersecurity L1 log analysis assistant."},
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.5,
-        max_tokens=300
-    )
-
-    return response.choices[0].message["content"].strip()
+    return generate_dynamic_prompt(prompt)
