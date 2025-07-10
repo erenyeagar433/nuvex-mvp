@@ -3,13 +3,11 @@
 from app.utils.reputation import get_reputation
 from app.agents.memory_agent import find_similar_cases
 from app.agents.log_query_agent import generate_log_instructions
+from app.utils.log_writer import save_log_instructions
 from app.agents.decision_agent import make_decision
 
 
 def analyze_behavior(offense_data: dict) -> dict:
-    """
-    Original L1-style behavior analysis based on IP patterns and log types.
-    """
     magnitude = offense_data.get("magnitude", 0)
     source_ips = offense_data.get("source_ips", [])
     destination_ips = offense_data.get("destination_ips", [])
@@ -17,7 +15,6 @@ def analyze_behavior(offense_data: dict) -> dict:
     event_count = offense_data.get("event_count", 0)
     events = offense_data.get("events", [])
 
-    # Deduce direction of attack and possible behavior
     if len(source_ips) == 1 and len(destination_ips) > 5:
         pattern = "single_remote_to_many_local"
         behavior = "Remote scanner or probing"
@@ -28,7 +25,6 @@ def analyze_behavior(offense_data: dict) -> dict:
         pattern = "general_traffic"
         behavior = "Mixed or normal pattern"
 
-    # Derive log types
     log_types = list(set([e.get("category", "unknown") for e in events]))
 
     summary = (
@@ -48,30 +44,31 @@ def analyze_behavior(offense_data: dict) -> dict:
 
 
 def analyze_offense(offense_data: dict) -> dict:
-    """
-    Main analyzer agent: combines behavior analysis, reputation, memory lookup,
-    and dynamic log request generation.
-    """
-    # Step 1: Behavioral summary
+    offense_id = offense_data.get("offense_id", "unknown")
+
+    # Step 1: Behavior analysis
     behavior_summary = analyze_behavior(offense_data)
 
-    # Step 2: Extract IOCs and perform reputation lookup
+    # Step 2: IOC reputation
     iocs = offense_data.get("source_ips", []) + offense_data.get("destination_ips", [])
     reputation_results = get_reputation(iocs)
 
-    # Step 3: Find similar past offenses
+    # Step 3: Memory retrieval
     similar_cases = find_similar_cases(offense_data, top_k=3)
 
-    # Step 4: Decision logic via decision agent
-    decision_outcome = make_decision(reputation_results, similar_cases)
-    decision = decision_outcome["decision"]
-    reasoning = decision_outcome["reasoning"]
+    # Step 4: Decision agent
+    decision_result = make_decision(reputation_results, similar_cases)
+    decision = decision_result["decision"]
+    reasoning = decision_result["reasoning"]
 
-    # Step 5: If escalated, generate log query instructions
-    log_request = generate_log_instructions(
-        behavior_summary["summary"],
-        offense_data
-    ) if decision == "escalate" else None
+    # Step 5: Log instruction generation and saving
+    log_request = None
+    if decision == "escalate":
+        log_request = generate_log_instructions(
+            offense_summary=behavior_summary["summary"],
+            offense_details=offense_data
+        )
+        save_log_instructions(offense_id, log_request)
 
     return {
         "summary": behavior_summary["summary"],
