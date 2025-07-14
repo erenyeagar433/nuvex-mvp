@@ -1,37 +1,74 @@
-# app/agents/incident_reporter.py
+import datetime
 
 def generate_incident_report(offense_id: str, offense: dict, analysis: dict) -> str:
     """
-    Create an L1-style incident report for escalation.
+    Generate a structured incident report for an escalated offense.
     """
-    header = f"Hi Team,\n\nAn offense (ID: {offense_id}) has been escalated for further investigation.\n"
-    
-    # Offense summary
-    summary = f"📝 Offense Summary:\n- Pattern: {analysis.get('pattern', 'N/A')}\n" \
-              f"- Behavior: {analysis.get('behavior', 'N/A')}\n" \
-              f"- Log types involved: {', '.join(analysis.get('log_types', []))}\n" \
-              f"- Source IPs: {', '.join(offense.get('source_ips', []))}\n" \
-              f"- Destination IPs: {', '.join(offense.get('destination_ips', []))}\n" \
-              f"- Event Count: {offense.get('event_count', 'N/A')}\n"
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # Sample event (if available)
-    sample_event = ""
-    if offense.get("events"):
-        event = offense["events"][0]
-        sample_event = f"\n📌 Sample Event:\n- Category: {event.get('category', 'N/A')}\n" \
-                       f"- Payload: {event.get('payload', 'N/A')}\n" \
-                       f"- Action Taken: {event.get('action', 'N/A')}\n" \
-                       f"- Username: {event.get('username', 'N/A')}\n" \
-                       f"- Event Name: {event.get('event_name', 'N/A')}"
+    header = f"""
+============================================
+         NuVex SOC Analyst Report
+============================================
+Report Generated: {timestamp}
+Offense ID      : {offense_id}
+Description     : {offense.get('description', 'N/A')}
+Log Source      : {offense.get('log_source', 'Unknown')}
+Event Name      : {offense.get('event_name', 'Unknown')}
+"""
 
-    # Reasoning
-    reasons = "\n🔍 Reason for Escalation:\n" + "\n".join(f"- {r}" for r in analysis.get("reasoning", []))
+    summary = f"""
+--- Summary ---
+{analysis.get('summary', 'No summary available.')}
+"""
 
-    # Recommendations
-    recommendations = "\n🛠️ Recommended Next Steps:\n" \
-                      "- Investigate related user activity around the offense time.\n" \
-                      "- Review firewall and endpoint logs for deeper context.\n" \
-                      "- Correlate with threat intel to validate IOC severity.\n" \
-                      "- Update incident tracker or ticketing system if necessary.\n"
+    event_sample = ""
+    if "events" in offense and offense["events"]:
+        sample = offense["events"][0]
+        event_sample = f"""
+--- Sample Event ---
+Source IP       : {sample.get('source_ip', 'N/A')}
+Destination IP  : {sample.get('destination_ip', 'N/A')}
+Username        : {sample.get('username', 'N/A')}
+Payload         : {sample.get('payload', 'N/A')}
+"""
 
-    return f"{header}\n{summary}\n{sample_event}\n{reasons}\n{recommendations}"
+    reasoning = "\n".join(f"- {r}" for r in analysis.get("reasoning", []))
+
+    similar_cases = ""
+    for case in analysis.get("similar_cases", []):
+        similar_cases += f"""
+    - [{case.get('similarity_score', '?')}] {case.get('description')} | Source: {', '.join(case.get('source_ips', []))} → Dest: {', '.join(case.get('destination_ips', []))} | Tags: {', '.join(case.get('tags', []))}
+"""
+
+    reputation_notes = ""
+    for entry in analysis.get("reputation", []):
+        if "ip" in entry and entry.get("abuse_confidence", 0) > 0:
+            reputation_notes += f"- IP {entry['ip']} has abuse score {entry['abuse_confidence']} (Reports: {entry.get('reports', 0)})\n"
+
+    recommendations = f"""
+--- Recommendations ---
+• Investigate further for lateral movement attempts or privilege escalation.
+• Correlate with other log sources like VPN, endpoint detection, or IAM logs.
+• Consider blocking the source IP {offense.get('source_ips', ['N/A'])[0]} if confirmed malicious.
+• Review firewall rules for any unintended exposures.
+"""
+
+    conclusion = f"""
+--- Final Notes ---
+Decision    : {analysis.get('decision', 'N/A')}
+Reasoning   : 
+{reasoning or 'N/A'}
+
+Similar Past Cases:
+{similar_cases or 'None'}
+
+Reputation Flags:
+{reputation_notes or 'None'}
+
+Log Analysis Instructions:
+{analysis.get('log_request', 'No log instructions provided.')}
+"""
+
+    report = header + summary + event_sample + conclusion + recommendations
+    return report
