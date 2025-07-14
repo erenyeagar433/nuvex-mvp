@@ -7,20 +7,23 @@ from app.agents.incident_reporter import generate_incident_report
 from app.utils.emailer import send_email  # Optional email sender
 import uuid
 
+# Initialize memory agent with dummy KB
 memory_agent = MemoryAgent(db_path="dummy_data/memory_base.json")
 
 async def handle_offense(offense: dict) -> dict:
     """
-    Main agent that handles the offense analysis workflow.
+    Main NuVex Agent handler for incoming offenses.
+    Handles analysis, memory recall, decision-making, and escalation simulation.
     """
+    # Assign or generate a unique offense ID
     offense_id = offense.get("offense_id") or str(uuid.uuid4())
-    print(f"\n[NuVex] Handling offense ID: {offense_id}")
+    print(f"\n[NuVex] 🧠 Handling Offense ID: {offense_id}")
 
-    # Step 1: Analyze the offense
-    extracted = offense  # Assuming already extracted
+    # STEP 1: Analyze the offense (log pattern, behavior, reputation, etc.)
+    extracted = offense  # (In MVP, assume already extracted)
     analysis = analyze_offense(extracted)
 
-    # Step 2: Memory lookup
+    # STEP 2: Retrieve similar past offenses from memory (ChromaDB or dummy KB)
     similar = memory_agent.search_similar_offenses(offense)
     analysis["similar_cases"] = [
         {
@@ -34,22 +37,28 @@ async def handle_offense(offense: dict) -> dict:
         for c in similar
     ]
 
-    # Step 3: Make decision
-    decision = make_decision(analysis["reputation"], analysis["similar_cases"])
-    analysis.update(decision)  # Add decision + reasoning to result
+    # STEP 3: Decision engine — escalate or mark false positive
+    decision = make_decision(
+        reputation_data=analysis.get("reputation", []),
+        similar_cases=analysis.get("similar_cases", [])
+    )
+    analysis.update(decision)
 
-    # Step 4: If escalated, generate incident report and simulate email
+    # STEP 4: If escalation is needed, generate full SOC report + simulate notification
     if decision["decision"] == "escalate":
         report = generate_incident_report(offense_id, offense, analysis)
 
-        print("\n=== Incident Report ===")
+        print("\n=== 🚨 Incident Report ===")
         print(report)
 
-        # Optional: Simulate email notification
-        send_email(
-            subject=f"[ALERT] Escalated Offense {offense_id}",
-            body=report,
-            to="soc.team@example.com"
-        )
+        try:
+            # Optional: Simulate email notification (can skip if offline or stubbed)
+            send_email(
+                subject=f"[ALERT] Escalated Offense: {offense_id}",
+                body=report,
+                to="soc.team@example.com"
+            )
+        except Exception as e:
+            print(f"[NuVex] Email simulation failed: {e}")
 
     return analysis
