@@ -1,68 +1,76 @@
 import os
 from datetime import datetime
 
-def generate_incident_report(offense_id: str, offense: dict, analysis: dict) -> str:
-    """
-    Generate a structured incident report for an escalated offense.
-    Saves it as a .txt file and simulates sending an email.
-    """
-    timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
-    offense_summary = offense.get("description", "No description provided.")
-    source_ips = ", ".join(offense.get("source_ips", []))
-    dest_ips = ", ".join(offense.get("destination_ips", []))
-    log_source = offense.get("log_source", "unknown")
+REPORTS_DIR = "dummy_data/reports"
+os.makedirs(REPORTS_DIR, exist_ok=True)
 
-    reputation = analysis.get("reputation", {})
-    similar_cases = analysis.get("similar_cases", [])
-    reasoning = analysis.get("reasoning", "No reasoning available.")
-    recommendations = analysis.get("recommendations", ["No recommendations provided."])
+def select_main_event(events, offense_type):
+    keywords = {
+        "Brute Force": ["failed login", "authentication failed", "invalid password"],
+        "Data Exfiltration": ["large download", "file transfer", "external upload"],
+        "Reconnaissance": ["port scan", "nmap", "enumeration"],
+        "Malware": ["malicious", "trojan", "exploit", "payload"],
+        "Access Violation": ["unauthorized", "privilege escalation", "access denied"]
+    }
 
-    report_lines = [
-        f"=== NuVex Incident Report ===",
-        f"Timestamp: {timestamp}",
-        f"Offense ID: {offense_id}",
-        f"Offense Summary: {offense_summary}",
-        f"Source IPs: {source_ips}",
-        f"Destination IPs: {dest_ips}",
-        f"Log Source: {log_source}",
-        "",
-        f"--- Threat Reputation Check ---",
-        f"  Malicious IPs: {', '.join(reputation.get('malicious', [])) or 'None'}",
-        f"  Suspicious IPs: {', '.join(reputation.get('suspicious', [])) or 'None'}",
-        f"  Clean IPs: {', '.join(reputation.get('clean', [])) or 'None'}",
-        "",
-        f"--- Similar Past Offenses ---",
+    offense_keywords = keywords.get(offense_type, [])
+    matching_events = [
+        e for e in events
+        if any(kw.lower() in e.get("payload", "").lower() for kw in offense_keywords)
     ]
+    return matching_events[0] if matching_events else (events[0] if events else None)
 
-    if similar_cases:
-        for i, case in enumerate(similar_cases, 1):
-            report_lines.append(
-                f"  [{i}] {case['description']} | Score: {case['similarity_score']}, "
-                f"Source: {', '.join(case['source_ips'])}, Log Source: {case['log_source']}"
-            )
-    else:
-        report_lines.append("  None found.")
+def generate_incident_report(offense_id, offense_type, description, source_ip, destination_ip,
+                              username, log_source, events, ip_reputation, summary, analysis, recommendations):
 
-    report_lines.extend([
-        "",
-        f"--- NuVex Decision & Reasoning ---",
-        f"  Decision: {analysis.get('decision', 'N/A').upper()}",
-        f"  Reasoning: {reasoning}",
-        "",
-        f"--- Recommendations ---",
-    ])
-    for rec in recommendations:
-        report_lines.append(f"  - {rec}")
+    report_path = os.path.join(REPORTS_DIR, f"offense_{offense_id}.txt")
+    main_event = select_main_event(events, offense_type)
 
-    report = "\n".join(report_lines)
+    short_summary = description.split("|")[0].strip() if "|" in description else description.strip()
+    offense_details = (
+        f"Summary: We observed a {offense_type} event from source IP {source_ip} targeting destination IP {destination_ip}"
+        f" via log source {log_source} from user {username if username else 'N/A'}."
+    )
 
-    # Save report to file
-    os.makedirs("reports", exist_ok=True)
-    filename = f"reports/offense_{offense_id}.txt"
-    with open(filename, "w") as f:
-        f.write(report)
+    sample_event = "\n".join([
+        f"Time: {main_event.get('start_time')}",
+        f"Source IP: {main_event.get('source_address')}",
+        f"Destination IP: {main_event.get('destination_address')}",
+        f"Username: {main_event.get('username') or 'N/A'}",
+        f"Log Source: {main_event.get('log_source') or 'N/A'}"
+    ]) if main_event else "N/A"
 
-    print(f"[NuVex] Incident report saved to: {filename}")
-    print(f"[NuVex] Simulated email sent to soc_team@example.com")
+    raw_payload = main_event.get("payload", "N/A") if main_event else "N/A"
 
-    return report
+    content = f"""
+Hi Team,
+
+Offense: {short_summary}
+
+Offense Details:
+{offense_details}
+
+Analysis:
+{analysis}
+
+IP Reputation:
+{ip_reputation or 'N/A'}
+
+Sample Event:
+{sample_event}
+
+Payload:
+{raw_payload}
+
+Recommendations:
+- {recommendations[0]}
+- {recommendations[1]}
+- {recommendations[2]}
+- {recommendations[3]}
+- {recommendations[4]}
+"""
+
+    with open(report_path, "w") as f:
+        f.write(content.strip())
+
+    return report_path, content.strip()
