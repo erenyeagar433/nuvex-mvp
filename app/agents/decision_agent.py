@@ -3,10 +3,9 @@
 import datetime
 import os
 
-from app.agents.model_router import get_model_response  # Uses OpenAI or Gemini
+from app.agents.model_router import generate_dynamic_prompt
 
 FALSE_POSITIVE_LOG = "false_positive_notes.txt"
-
 
 def save_false_positive_note(reasons: list, offense_id: str = "Unknown") -> None:
     """
@@ -22,34 +21,10 @@ def save_false_positive_note(reasons: list, offense_id: str = "Unknown") -> None
         f.write(note)
 
 
-def generate_dynamic_reasoning(reputation_results, similar_cases, decision) -> str:
-    """
-    Use LLM to generate a dynamic justification for the decision.
-    """
-    prompt = f"""
-You are an L1 SOC analyst assistant. An offense has been analyzed using threat intelligence and memory lookup.
-
-Decision: {decision.upper()}
-
-Based on the following data, explain in 2-3 bullet points why this decision is reasonable.
-
-Reputation results:
-{reputation_results}
-
-Similar past cases:
-{similar_cases}
-
-Avoid repeating the input and avoid headers like 'Explanation:'. Just write the reasoning.
-    """.strip()
-
-    response = get_model_response(prompt)
-    return response.strip()
-
-
 def make_decision(reputation_results, similar_cases, offense_id: str = "Unknown") -> dict:
     """
     Given reputation data and memory results, decide whether the offense
-    should be escalated or marked as false positive. Returns decision + reasoning.
+    should be escalated or marked as false positive. Returns decision + reason.
     """
     decision = "false_positive"
     reasons = []
@@ -70,10 +45,28 @@ def make_decision(reputation_results, similar_cases, offense_id: str = "Unknown"
             decision = "escalate"
             reasons.append("Similar past cases tagged as Data Exfiltration")
 
-    # If still false positive, generate dynamic LLM explanation
+    # Dynamic reasoning if no strong indicators found
+    if not reasons:
+        # Prepare prompt
+        reputation_summary = "\n".join([str(r) for r in reputation_results]) or "None"
+        memory_summary = "\n".join([f"Offense ID: {c.get('offense_id', 'N/A')}, Tags: {c.get('tags', [])}" for c in similar_cases]) or "None"
+        prompt = f"""
+You are a SOC analyst agent. The following offense was analyzed, and no immediate high-risk indicators were detected.
+Provide a human-readable justification for why this offense could be marked as a false positive.
+
+Reputation Results:
+{reputation_summary}
+
+Memory Matches:
+{memory_summary}
+
+Give 1-2 lines of reasoning based on the above, as if explaining to a security analyst.
+"""
+        response = generate_dynamic_prompt(prompt).strip()
+        reasons.append(response)
+
+    # Save false positive note if applicable
     if decision == "false_positive":
-        dynamic_reason = generate_dynamic_reasoning(reputation_results, similar_cases, decision)
-        reasons = [dynamic_reason]
         save_false_positive_note(reasons, offense_id)
 
     return {
