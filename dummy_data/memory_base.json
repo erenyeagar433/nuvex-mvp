@@ -1,317 +1,212 @@
 [
   {
-    "offense_id": "offense-001",
     "description": "Simulated offense: Reconnaissance activity detected",
-    "source_ips": ["192.168.23.13"],
-    "destination_ips": ["10.0.199.136"],
+    "source_ips": [
+      "192.168.23.13"
+    ],
+    "destination_ips": [
+      "10.0.199.136"
+    ],
     "log_source": "HDC-PA-FW-PRI",
-    "tags": ["Reconnaissance", "Data Exfiltration"],
-    "timestamp": "2025-07-21T12:00:00Z",
-    "username": "N/A",
-    "events": [
-      {
-        "event_description": "Recon scan detected from 192.168.23.13",
-        "start_time": "2025-07-21T12:00:00Z",
-        "source_address": "192.168.23.13",
-        "destination_address": "10.0.199.136",
-        "username": "N/A",
-        "log_source": "HDC-PA-FW-PRI",
-        "payload": "Simulated packet capture data for reconnaissance scan"
-      }
+    "tags": [
+      "Reconnaissance",
+      "Data Exfiltration"
     ]
   },
   {
-    "offense_id": "offense-002",
     "description": "Simulated offense: Cloud Misconfig activity detected",
-    "source_ips": ["192.168.175.252"],
-    "destination_ips": ["10.0.241.238"],
+    "source_ips": [
+      "192.168.175.252"
+    ],
+    "destination_ips": [
+      "10.0.241.238"
+    ],
     "log_source": "SIEM-LOG",
-    "tags": ["Malware", "Cloud Misconfig"],
-    "timestamp": "2025-07-20T09:45:30Z",
-    "username": "N/A",
-    "events": [
-      {
-        "event_description": "Cloud misconfiguration detected via SIEM logs",
-        "start_time": "2025-07-20T09:45:30Z",
-        "source_address": "192.168.175.252",
-        "destination_address": "10.0.241.238",
-        "username": "N/A",
-        "log_source": "SIEM-LOG",
-        "payload": "Simulated configuration error logs"
-      }
+    "tags": [
+      "Malware",
+      "Cloud Misconfig"
     ]
   },
   {
-    "offense_id": "offense-003",
     "description": "Simulated offense: Suspicious Login activity detected",
-    "source_ips": ["192.168.19.71"],
-    "destination_ips": ["10.0.63.15"],
+    "source_ips": [
+      "192.168.19.71"
+    ],
+    "destination_ips": [
+      "10.0.63.15"
+    ],
     "log_source": "HDC-PA-FW-PRI",
-    "tags": ["Malware", "Phishing"],
-    "timestamp": "2025-07-19T16:22:10Z",
-    "username": "jdoe",
-    "events": [
-      {
-        "event_description": "Multiple failed login attempts from suspicious IP",
-        "start_time": "2025-07-19T16:20:00Z",
-        "source_address": "192.168.19.71",
-        "destination_address": "10.0.63.15",
-        "username": "jdoe",
-        "log_source": "HDC-PA-FW-PRI",
-        "payload": "Authentication failure logs"
-      }
+    "tags": [
+      "Malware",
+      "Phishing"
     ]
   },
   {
-    "offense_id": "offense-004",
     "description": "Simulated offense: Malware activity detected",
-    "source_ips": ["192.168.182.21"],
-    "destination_ips": ["10.0.206.68"],
+    "source_ips": [
+      "192.168.182.21"
+    ],
+    "destination_ips": [
+      "10.0.206.68"
+    ],
     "log_source": "WIN-AD-01",
-    "tags": ["Suspicious Login", "Phishing"],
-    "timestamp": "2025-07-18T14:05:00Z",
-    "username": "asmith",
-    "events": [
-      {
-        "event_description": "Malware signature detected on host",
-        "start_time": "2025-07-18T14:00:00Z",
-        "source_address": "192.168.182.21",
-        "destination_address": "10.0.206.68",
-        "username": "asmith",
-        "log_source": "WIN-AD-01",
-        "payload": "Antivirus alert log"
-      }
+    "tags": [
+      "Suspicious Login",
+      "Phishing"
     ]
   },
   {
-    "offense_id": "offense-005",
     "description": "Simulated offense: Firewall Rule Violation activity detected",
-    "source_ips": ["192.168.247.231"],
-    "destination_ips": ["10.0.31.164"],
+    "source_ips": [
+      "192.168.247.231"
+    ],
+    "destination_ips": [
+      "10.0.31.164"
+    ],
     "log_source": "SIEM-LOG",
-    "tags": ["Data Exfiltration", "Firewall Rule Violation"],
-    "timestamp": "2025-07-17T11:30:45Z",
-    "username": "N/A",
-    "events": [
-      {
-        "event_description": "Firewall rule violation detected",
-        "start_time": "2025-07-17T11:30:00Z",
-        "source_address": "192.168.247.231",
-        "destination_address": "10.0.31.164",
-        "username": "N/A",
-        "log_source": "SIEM-LOG",
-        "payload": "Firewall logs showing rule violation"
-      }
+    "tags": [
+      "Data Exfiltration",
+      "Firewall Rule Violation"
     ]
   },
   {
-    "offense_id": "offense-006",
     "description": "Simulated offense: Data Exfiltration activity detected",
-    "source_ips": ["192.168.87.76"],
-    "destination_ips": ["10.0.92.130"],
+    "source_ips": [
+      "192.168.87.76"
+    ],
+    "destination_ips": [
+      "10.0.92.130"
+    ],
     "log_source": "WEB-PROXY",
-    "tags": ["Suspicious Login", "Anomalous Behavior"],
-    "timestamp": "2025-07-16T08:55:20Z",
-    "username": "mbrown",
-    "events": [
-      {
-        "event_description": "Large data transfer detected via web proxy",
-        "start_time": "2025-07-16T08:50:00Z",
-        "source_address": "192.168.87.76",
-        "destination_address": "10.0.92.130",
-        "username": "mbrown",
-        "log_source": "WEB-PROXY",
-        "payload": "Web proxy logs showing large file upload"
-      }
+    "tags": [
+      "Suspicious Login",
+      "Anomalous Behavior"
     ]
   },
   {
-    "offense_id": "offense-007",
     "description": "Simulated offense: Reconnaissance activity detected",
-    "source_ips": ["192.168.151.102"],
-    "destination_ips": ["10.0.141.27"],
+    "source_ips": [
+      "192.168.151.102"
+    ],
+    "destination_ips": [
+      "10.0.141.27"
+    ],
     "log_source": "WIN-AD-01",
-    "tags": ["Firewall Rule Violation", "Port Scan"],
-    "timestamp": "2025-07-15T10:10:10Z",
-    "username": "N/A",
-    "events": [
-      {
-        "event_description": "Port scan detected on internal host",
-        "start_time": "2025-07-15T10:00:00Z",
-        "source_address": "192.168.151.102",
-        "destination_address": "10.0.141.27",
-        "username": "N/A",
-        "log_source": "WIN-AD-01",
-        "payload": "Firewall logs indicating port scan"
-      }
+    "tags": [
+      "Firewall Rule Violation",
+      "Port Scan"
     ]
   },
   {
-    "offense_id": "offense-008",
     "description": "Simulated offense: Privilege Escalation activity detected",
-    "source_ips": ["192.168.220.209"],
-    "destination_ips": ["10.0.191.183"],
+    "source_ips": [
+      "192.168.220.209"
+    ],
+    "destination_ips": [
+      "10.0.191.183"
+    ],
     "log_source": "VPN-GW",
-    "tags": ["Data Exfiltration", "Unauthorized Access"],
-    "timestamp": "2025-07-14T22:45:00Z",
-    "username": "admin_user",
-    "events": [
-      {
-        "event_description": "Unauthorized privilege escalation attempt detected",
-        "start_time": "2025-07-14T22:40:00Z",
-        "source_address": "192.168.220.209",
-        "destination_address": "10.0.191.183",
-        "username": "admin_user",
-        "log_source": "VPN-GW",
-        "payload": "VPN gateway logs showing privilege escalation"
-      }
+    "tags": [
+      "Data Exfiltration",
+      "Unauthorized Access"
     ]
   },
   {
-    "offense_id": "offense-009",
     "description": "Simulated offense: Anomalous Behavior activity detected",
-    "source_ips": ["192.168.215.162"],
-    "destination_ips": ["10.0.56.162"],
+    "source_ips": [
+      "192.168.215.162"
+    ],
+    "destination_ips": [
+      "10.0.56.162"
+    ],
     "log_source": "VPN-GW",
-    "tags": ["Anomalous Behavior", "Unauthorized Access"],
-    "timestamp": "2025-07-13T13:25:30Z",
-    "username": "N/A",
-    "events": [
-      {
-        "event_description": "Suspicious network behavior detected",
-        "start_time": "2025-07-13T13:20:00Z",
-        "source_address": "192.168.215.162",
-        "destination_address": "10.0.56.162",
-        "username": "N/A",
-        "log_source": "VPN-GW",
-        "payload": "VPN gateway anomaly logs"
-      }
+    "tags": [
+      "Anomalous Behavior",
+      "Unauthorized Access"
     ]
   },
   {
-    "offense_id": "offense-010",
     "description": "Simulated offense: Data Exfiltration activity detected",
-    "source_ips": ["192.168.115.190"],
-    "destination_ips": ["10.0.252.25"],
+    "source_ips": [
+      "192.168.115.190"
+    ],
+    "destination_ips": [
+      "10.0.252.25"
+    ],
     "log_source": "VPN-GW",
-    "tags": ["Data Exfiltration", "Unauthorized Access"],
-    "timestamp": "2025-07-12T07:15:00Z",
-    "username": "N/A",
-    "events": [
-      {
-        "event_description": "Data exfiltration detected via VPN gateway",
-        "start_time": "2025-07-12T07:10:00Z",
-        "source_address": "192.168.115.190",
-        "destination_address": "10.0.252.25",
-        "username": "N/A",
-        "log_source": "VPN-GW",
-        "payload": "VPN logs showing large data transfer"
-      }
+    "tags": [
+      "Data Exfiltration",
+      "Unauthorized Access"
     ]
   },
   {
-    "offense_id": "offense-011",
     "description": "Simulated offense: Data Exfiltration activity detected",
-    "source_ips": ["192.168.201.137"],
-    "destination_ips": ["10.0.213.181"],
+    "source_ips": [
+      "192.168.201.137"
+    ],
+    "destination_ips": [
+      "10.0.213.181"
+    ],
     "log_source": "SIEM-LOG",
-    "tags": ["Data Exfiltration", "Anomalous Behavior"],
-    "timestamp": "2025-07-11T19:05:00Z",
-    "username": "N/A",
-    "events": [
-      {
-        "event_description": "Large outbound data transfer detected",
-        "start_time": "2025-07-11T19:00:00Z",
-        "source_address": "192.168.201.137",
-        "destination_address": "10.0.213.181",
-        "username": "N/A",
-        "log_source": "SIEM-LOG",
-        "payload": "SIEM logs showing exfiltration"
-      }
+    "tags": [
+      "Data Exfiltration",
+      "Anomalous Behavior"
     ]
   },
   {
-    "offense_id": "offense-012",
     "description": "Simulated offense: Brute Force activity detected",
-    "source_ips": ["192.168.159.197"],
-    "destination_ips": ["10.0.31.99"],
+    "source_ips": [
+      "192.168.159.197"
+    ],
+    "destination_ips": [
+      "10.0.31.99"
+    ],
     "log_source": "VPN-GW",
-    "tags": ["Port Scan", "Anomalous Behavior"],
-    "timestamp": "2025-07-10T03:30:00Z",
-    "username": "attacker01",
-    "events": [
-      {
-        "event_description": "Multiple failed login attempts from attacker",
-        "start_time": "2025-07-10T03:25:00Z",
-        "source_address": "192.168.159.197",
-        "destination_address": "10.0.31.99",
-        "username": "attacker01",
-        "log_source": "VPN-GW",
-        "payload": "VPN logs showing brute force attack"
-      }
+    "tags": [
+      "Port Scan",
+      "Anomalous Behavior"
     ]
   },
   {
-    "offense_id": "offense-013",
     "description": "Simulated offense: Data Exfiltration activity detected",
-    "source_ips": ["192.168.90.6"],
-    "destination_ips": ["10.0.88.207"],
+    "source_ips": [
+      "192.168.90.6"
+    ],
+    "destination_ips": [
+      "10.0.88.207"
+    ],
     "log_source": "SIEM-LOG",
-    "tags": ["Cloud Misconfig", "Phishing"],
-    "timestamp": "2025-07-09T15:45:00Z",
-    "username": "N/A",
-    "events": [
-      {
-        "event_description": "Suspicious phishing activity and misconfig detected",
-        "start_time": "2025-07-09T15:40:00Z",
-        "source_address": "192.168.90.6",
-        "destination_address": "10.0.88.207",
-        "username": "N/A",
-        "log_source": "SIEM-LOG",
-        "payload": "SIEM logs with phishing and cloud config alerts"
-      }
+    "tags": [
+      "Cloud Misconfig",
+      "Phishing"
     ]
   },
   {
-    "offense_id": "offense-014",
     "description": "Simulated offense: Cloud Misconfig activity detected",
-    "source_ips": ["192.168.144.169"],
-    "destination_ips": ["10.0.139.29"],
+    "source_ips": [
+      "192.168.144.169"
+    ],
+    "destination_ips": [
+      "10.0.139.29"
+    ],
     "log_source": "S3-AUDIT-LOG",
-    "tags": ["Anomalous Behavior", "Reconnaissance"],
-    "timestamp": "2025-07-08T21:15:00Z",
-    "username": "N/A",
-    "events": [
-      {
-        "event_description": "Anomalous behavior and reconnaissance detected in cloud audit logs",
-        "start_time": "2025-07-08T21:10:00Z",
-        "source_address": "192.168.144.169",
-        "destination_address": "10.0.139.29",
-        "username": "N/A",
-        "log_source": "S3-AUDIT-LOG",
-        "payload": "Audit logs indicating suspicious cloud behavior"
-      }
+    "tags": [
+      "Anomalous Behavior",
+      "Reconnaissance"
     ]
   },
   {
-    "offense_id": "offense-015",
     "description": "Simulated offense: Privilege Escalation activity detected",
-    "source_ips": ["192.168.61.71"],
-    "destination_ips": ["10.0.168.160"],
+    "source_ips": [
+      "192.168.61.71"
+    ],
+    "destination_ips": [
+      "10.0.168.160"
+    ],
     "log_source": "WEB-PROXY",
-    "tags": ["Malware", "Port Scan"],
-    "timestamp": "2025-07-07T17:40:00Z",
-    "username": "admin",
-    "events": [
-      {
-        "event_description": "Suspicious privilege escalation detected via web proxy",
-        "start_time": "2025-07-07T17:35:00Z",
-        "source_address": "192.168.61.71",
-        "destination_address": "10.0.168.160",
-        "username": "admin",
-        "log_source": "WEB-PROXY",
-        "payload": "Web proxy logs showing privilege escalation attempt"
-      }
+    "tags": [
+      "Malware",
+      "Port Scan"
     ]
   }
 ]
