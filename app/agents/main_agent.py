@@ -4,7 +4,6 @@ from app.agents.offense_analyzer import analyze_offense
 from app.agents.memory_agent import MemoryAgent
 from app.agents.decision_agent import make_decision
 from app.agents.incident_reporter import generate_incident_report
-from app.utils.emailer import send_email  # Optional email sender
 import uuid
 
 # Initialize memory agent with dummy KB
@@ -44,21 +43,13 @@ async def handle_offense(offense: dict) -> dict:
     )
     analysis.update(decision)
 
-    # STEP 4: If escalation is needed, generate full SOC report + simulate notification
+    # STEP 4: If escalation is needed, generate full SOC report
     if decision["decision"] == "escalate":
         report = generate_incident_report(offense_id, offense, analysis)
 
         print("\n=== 🚨 Incident Report ===")
         print(report)
 
-        try:
-            # Optional: Simulate email notification (can skip if offline or stubbed)
-            send_email(
-                subject=f"[ALERT] Escalated Offense: {offense_id}",
-                body=report,
-                to="soc.team@example.com"
-            )
-        except Exception as e:
-            print(f"[NuVex] Email simulation failed: {e}")
+        # Email logic removed for MVP
 
     return analysis
