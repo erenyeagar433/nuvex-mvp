@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 
-REPORTS_DIR = "dummy_data/reports"
+REPORTS_DIR = "reports"
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
 def select_main_event(events, offense_type):
@@ -28,16 +28,16 @@ def generate_incident_report(offense_id, offense_type, description, source_ip, d
 
     short_summary = description.split("|")[0].strip() if "|" in description else description.strip()
     offense_details = (
-        f"Summary: We observed a {offense_type} event from source IP {source_ip} targeting destination IP {destination_ip}"
-        f" via log source {log_source} from user {username if username else 'N/A'}."
+        f"Summary: A {offense_type} event was detected from source IP {source_ip} targeting destination IP {destination_ip} "
+        f"via log source '{log_source}', involving user '{username if username else 'N/A'}'."
     )
 
     sample_event = "\n".join([
-        f"Time: {main_event.get('start_time')}",
-        f"Source IP: {main_event.get('source_address')}",
-        f"Destination IP: {main_event.get('destination_address')}",
-        f"Username: {main_event.get('username') or 'N/A'}",
-        f"Log Source: {main_event.get('log_source') or 'N/A'}"
+        f"Time: {main_event.get('start_time', 'N/A')}",
+        f"Source IP: {main_event.get('source_address', 'N/A')}",
+        f"Destination IP: {main_event.get('destination_address', 'N/A')}",
+        f"Username: {main_event.get('username', 'N/A')}",
+        f"Log Source: {main_event.get('log_source', 'N/A')}"
     ]) if main_event else "N/A"
 
     raw_payload = main_event.get("payload", "N/A") if main_event else "N/A"
