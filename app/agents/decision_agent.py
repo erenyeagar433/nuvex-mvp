@@ -3,7 +3,10 @@
 import datetime
 import os
 
+from app.agents.model_router import get_model_response  # Uses OpenAI or Gemini
+
 FALSE_POSITIVE_LOG = "false_positive_notes.txt"
+
 
 def save_false_positive_note(reasons: list, offense_id: str = "Unknown") -> None:
     """
@@ -19,10 +22,34 @@ def save_false_positive_note(reasons: list, offense_id: str = "Unknown") -> None
         f.write(note)
 
 
+def generate_dynamic_reasoning(reputation_results, similar_cases, decision) -> str:
+    """
+    Use LLM to generate a dynamic justification for the decision.
+    """
+    prompt = f"""
+You are an L1 SOC analyst assistant. An offense has been analyzed using threat intelligence and memory lookup.
+
+Decision: {decision.upper()}
+
+Based on the following data, explain in 2-3 bullet points why this decision is reasonable.
+
+Reputation results:
+{reputation_results}
+
+Similar past cases:
+{similar_cases}
+
+Avoid repeating the input and avoid headers like 'Explanation:'. Just write the reasoning.
+    """.strip()
+
+    response = get_model_response(prompt)
+    return response.strip()
+
+
 def make_decision(reputation_results, similar_cases, offense_id: str = "Unknown") -> dict:
     """
     Given reputation data and memory results, decide whether the offense
-    should be escalated or marked as false positive. Returns decision + reason.
+    should be escalated or marked as false positive. Returns decision + reasoning.
     """
     decision = "false_positive"
     reasons = []
@@ -43,11 +70,10 @@ def make_decision(reputation_results, similar_cases, offense_id: str = "Unknown"
             decision = "escalate"
             reasons.append("Similar past cases tagged as Data Exfiltration")
 
-    if not reasons:
-        reasons.append("No significant threat indicators detected")
-
-    # Save false positive note if applicable
+    # If still false positive, generate dynamic LLM explanation
     if decision == "false_positive":
+        dynamic_reason = generate_dynamic_reasoning(reputation_results, similar_cases, decision)
+        reasons = [dynamic_reason]
         save_false_positive_note(reasons, offense_id)
 
     return {
