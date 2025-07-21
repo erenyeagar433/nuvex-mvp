@@ -1,29 +1,35 @@
 import os
-from datetime import datetime
 
 REPORTS_DIR = "reports"
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
+
 def select_main_event(events, offense_type):
-    keywords = {
-        "Brute Force": ["failed login", "authentication failed", "invalid password"],
-        "Data Exfiltration": ["large download", "file transfer", "external upload"],
-        "Reconnaissance": ["port scan", "nmap", "enumeration"],
-        "Malware": ["malicious", "trojan", "exploit", "payload"],
-        "Access Violation": ["unauthorized", "privilege escalation", "access denied"]
-    }
+    # Simple selector: pick first event matching offense type, else first event
+    for event in events:
+        if offense_type.lower() in event.get("event_description", "").lower():
+            return event
+    return events[0] if events else None
 
-    offense_keywords = keywords.get(offense_type, [])
-    matching_events = [
-        e for e in events
-        if any(kw.lower() in e.get("payload", "").lower() for kw in offense_keywords)
-    ]
-    return matching_events[0] if matching_events else (events[0] if events else None)
 
-def generate_incident_report(offense_id, offense_type, description, source_ip, destination_ip,
-                              username, log_source, events, ip_reputation, summary, analysis, recommendations):
-
+def generate_incident_report(offense_id, offense, analysis):
     report_path = os.path.join(REPORTS_DIR, f"offense_{offense_id}.txt")
+
+    # Extract from offense
+    offense_type = offense.get("offense_type", "Unknown")
+    description = offense.get("description", "No description")
+    source_ip = offense.get("source_ip", "N/A")
+    destination_ip = offense.get("destination_ip", "N/A")
+    username = offense.get("username", "N/A")
+    log_source = offense.get("log_source", "Unknown")
+    events = offense.get("events", [])
+
+    # Extract from analysis
+    ip_reputation = analysis.get("reputation", [])
+    summary = analysis.get("summary", "No summary")
+    recommendations = analysis.get("recommendations", ["N/A"] * 5)
+
+    # Select key event
     main_event = select_main_event(events, offense_type)
 
     short_summary = description.split("|")[0].strip() if "|" in description else description.strip()
@@ -51,7 +57,7 @@ Offense Details:
 {offense_details}
 
 Analysis:
-{analysis}
+{summary}
 
 IP Reputation:
 {ip_reputation or 'N/A'}
