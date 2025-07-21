@@ -39,7 +39,8 @@ async def handle_offense(offense: dict) -> dict:
     # STEP 3: Decision engine — escalate or mark false positive
     decision = make_decision(
         reputation_data=analysis.get("reputation", []),
-        similar_cases=analysis.get("similar_cases", [])
+        similar_cases=analysis.get("similar_cases", []),
+        offense_id=offense_id
     )
     analysis.update(decision)
 
