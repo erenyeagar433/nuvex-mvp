@@ -11,21 +11,21 @@ def test_analyze_offense_sample():
             "192.168.1.10", "192.168.1.11", "192.168.1.12",
             "192.168.1.13", "192.168.1.14", "192.168.1.15"
         ],
-        "log_sources": ["FIREWALL"],
+        "log_source": "FIREWALL",
         "event_count": 20,
         "events": [
             {"category": "network"},
             {"category": "firewall"},
             {"category": "firewall"},
-            {"category": "unknown"},
+            {"category": "unknown"}
         ]
     }
 
     result = analyze_offense(sample_offense)
 
     print("\n=== Offense Analysis Result ===")
-    for k, v in result.items():
-        print(f"{k}: {v}")
+    for key, value in result.items():
+        print(f"{key}: {value}")
 
 if __name__ == "__main__":
     test_analyze_offense_sample()
