@@ -1,18 +1,20 @@
-# Core
+# Core backend frameworks
+fastapi
+uvicorn
+
+# Vector similarity + memory search
 chromadb
 sentence-transformers
 
-# For OpenAI API
+# OpenAI & Gemini model APIs
 openai
-
-# For Google Gemini API (via Vertex AI SDK)
 google-generativeai
 
-# Load environment variables
+# Environment variable loading
 python-dotenv
 
-# HTTP requests for AbuseIPDB and VirusTotal
+# External threat intel APIs
 requests
 
-# ASGI web server for FastAPI
-uvicorn
+# (Optional) Data validation if used directly
+pydantic
