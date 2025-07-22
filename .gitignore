@@ -1,8 +1,41 @@
-# Ignore Python cache
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*.so
 
-# Ignore environment secrets
+# Environment
 .env
-# Ignore logs and instruction files
+.venv/
+venv/
+env/
+
+# Logs, temp & runtime files
 logs/
+*.log
+*.tmp
+*.pid
+
+# Reports generated during runtime
+reports/
+log_requests/
+*.txt
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Pytest / test cache
+.cache/
+.pytest_cache/
+*.cover
+
+# IDE files
+.vscode/
+.idea/
+
+# Jupyter (if used)
+.ipynb_checkpoints/
+
+# Docker (if any)
+*.env.docker
+docker-compose.override.yml
