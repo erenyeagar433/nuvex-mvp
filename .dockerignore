@@ -1,11 +1,29 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+
+# Virtual environments (if any)
+env/
+venv/
+
+# Secret files
 .env
-.DS_Store
-.git/
-.vscode/
-tests/
+
+# Logs and output
 logs/
 reports/
+*.log
 *.txt
+
+# Test files and folders
+tests/
+
+# macOS / system-specific files
+.DS_Store
+
+# Git and editor-specific stuff
+.git/
+.vscode/
+.idea/
