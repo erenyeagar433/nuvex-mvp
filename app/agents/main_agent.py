@@ -46,10 +46,11 @@ async def handle_offense(offense: dict) -> dict:
 
     # STEP 4: If escalation is needed, generate full SOC report
     if decision["decision"] == "escalate":
-        report = generate_incident_report(offense_id, offense, analysis)
+        report_path, report_content = generate_incident_report(offense_id, offense, analysis)
 
         print("\n=== 🚨 Incident Report ===")
-        print(report)
+        print(report_content)
+        print(f"[NuVex] ✅ Incident report saved at: {report_path}")
 
         # Email logic removed for MVP
 
