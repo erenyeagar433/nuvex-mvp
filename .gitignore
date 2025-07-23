@@ -3,39 +3,43 @@ __pycache__/
 *.py[cod]
 *.so
 
-# Environment
+# Virtual environments
 .env
 .venv/
 venv/
 env/
 
-# Logs, temp & runtime files
-logs/
+# Logs, temp, and runtime files
+logs/*.txt
+logs/instructions/
 *.log
 *.tmp
 *.pid
 
-# Reports generated during runtime
-reports/
-log_requests/
-*.txt
+# Reports and runtime outputs
+reports/*.txt
+reports/false_positive_notes.txt
 
-# OS-specific
+# Data directory (allow specific files, ignore generated content)
+dummy_data/
+!dummy_data/offense_samples.json
+
+# OS-specific files
 .DS_Store
 Thumbs.db
 
-# Pytest / test cache
+# Testing and coverage
 .cache/
 .pytest_cache/
 *.cover
 
-# IDE files
+# IDE/editor config
 .vscode/
 .idea/
 
-# Jupyter (if used)
+# Jupyter notebook cache
 .ipynb_checkpoints/
 
-# Docker (if any)
+# Docker-specific
 *.env.docker
 docker-compose.override.yml
