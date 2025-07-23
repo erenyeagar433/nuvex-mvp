@@ -1,5 +1,3 @@
-# tests/test_offense_analyzer.py
-
 from app.agents.offense_analyzer import analyze_offense
 
 def test_analyze_offense_sample():
@@ -14,14 +12,18 @@ def test_analyze_offense_sample():
         "log_source": "FIREWALL",
         "event_count": 20,
         "events": [
-            {"category": "network"},
-            {"category": "firewall"},
-            {"category": "firewall"},
-            {"category": "unknown"}
+            {"event_type": "network", "protocol": "TCP"},
+            {"event_type": "firewall", "protocol": "UDP"},
+            {"event_type": "firewall", "protocol": "TCP"},
+            {"event_type": "unknown", "protocol": "ICMP"}
         ]
     }
 
     result = analyze_offense(sample_offense)
+
+    assert result["source_ip_count"] == 1
+    assert result["destination_ip_count"] == 6
+    assert result["severity"] >= 0
 
     print("\n=== Offense Analysis Result ===")
     for key, value in result.items():
