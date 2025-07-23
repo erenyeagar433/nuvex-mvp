@@ -1,20 +1,20 @@
 # Core backend frameworks
-fastapi
-uvicorn
+fastapi==0.115.0
+uvicorn==0.30.6
 
 # Vector similarity + memory search
-chromadb
-sentence-transformers
+chromadb==0.5.5
+sentence-transformers==3.1.1
 
 # OpenAI & Gemini model APIs
-openai
-google-generativeai
+openai==1.47.0
+google-generativeai==0.8.2
 
 # Environment variable loading
-python-dotenv
+python-dotenv==1.0.1
 
 # External threat intel APIs
-requests
+requests==2.32.3
 
 # (Optional) Data validation if used directly
-pydantic
+pydantic==2.9.2
