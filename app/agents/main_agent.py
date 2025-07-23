@@ -1,6 +1,6 @@
 # app/agents/main_agent.py
 
-from app.agents.offense_analyzer import analyze_offense
+from app.agents.offense_analyzer import enrich_offense as analyze_offense
 from app.agents.memory_agent import MemoryAgent
 from app.agents.decision_agent import make_decision
 from app.agents.incident_reporter import generate_incident_report
