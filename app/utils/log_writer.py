@@ -12,14 +12,17 @@ def save_log_instructions(offense_id: str, instructions: str, base_dir: str = "l
         base_dir (str): Directory to save the logs (default: logs/instructions).
 
     Returns:
-        str: Path to the saved file.
+        str: Path to the saved file or None if an error occurs.
     """
-    os.makedirs(base_dir, exist_ok=True)
-    filename = f"offense_{offense_id}.txt"
-    filepath = os.path.join(base_dir, filename)
+    try:
+        os.makedirs(base_dir, exist_ok=True)
+        filename = f"offense_{offense_id}.txt"
+        filepath = os.path.join(base_dir, filename)
 
-    with open(filepath, "w") as f:
-        f.write(instructions)
+        with open(filepath, "w") as f:
+            f.write(instructions)
 
-    return filepath
-
+        return filepath
+    except OSError as e:
+        print(f"Error writing log instructions for offense {offense_id}: {e}")
+        return None
