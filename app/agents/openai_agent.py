@@ -1,7 +1,7 @@
 # app/agents/openai_agent.py
-
 import os
 from openai import OpenAI
+import httpx
 
 def generate_response(prompt: str) -> str:
     """
@@ -14,7 +14,15 @@ def generate_response(prompt: str) -> str:
         str: The generated response or an error message if the query fails.
     """
     try:
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        # Use httpx client with proxy from environment if set
+        proxy = os.getenv("HTTPS_PROXY") or os.getenv("HTTP_PROXY")
+        http_client = httpx.Client(proxies=proxy) if proxy else None
+
+        client = OpenAI(
+            api_key=os.getenv("OPENAI_API_KEY"),
+            http_client=http_client
+        )
+
         response = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
