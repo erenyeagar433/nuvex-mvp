@@ -39,3 +39,13 @@ def check_virustotal(ioc: str) -> dict:
         }
     except requests.RequestException:
         return {"ioc": ioc, "malicious_votes": 0, "suspicious_votes": 0}
+
+def get_reputation(ioc: str) -> dict:
+    """Combines reputation data from AbuseIPDB and VirusTotal for an IP or URL."""
+    abuseipdb_result = check_ip_abuseipdb(ioc) if not ioc.startswith("http") else {}
+    virustotal_result = check_virustotal(ioc)
+    return {
+        "ioc": ioc,
+        "abuseipdb": abuseipdb_result,
+        "virustotal": virustotal_result
+    }
