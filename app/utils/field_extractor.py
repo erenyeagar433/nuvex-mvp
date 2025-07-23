@@ -18,12 +18,12 @@ def _extract_sample_events(events):
     # Only pick the first 5 events for lightweight processing
     return [
         {
-            "name": e.get("event_name"),
-            "category": e.get("low_level_category"),
-            "action": e.get("action"),
-            "payload": e.get("payload"),
-            "source_ip": e.get("source_ip"),
-            "destination_ip": e.get("destination_ip"),
+            "name": e.get("event_type", "Unknown"),
+            "category": e.get("protocol", "Unknown"),
+            "action": e.get("qid", "Unknown"),
+            "payload": e.get("payload", "N/A"),
+            "source_ip": e.get("source_ip", "N/A"),
+            "destination_ip": e.get("destination_ip", "N/A"),
         } for e in events[:5]
     ]
 
