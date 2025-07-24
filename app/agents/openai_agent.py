@@ -4,7 +4,7 @@ from openai import OpenAI
 
 def generate_response(prompt: str) -> str:
     """
-    Generates a response from OpenAI's GPT model for a given prompt.
+    Generates a response from OpenAI's GPT model (no rate limiting needed for paid tier).
     
     Args:
         prompt (str): The input prompt for the model.
@@ -17,7 +17,7 @@ def generate_response(prompt: str) -> str:
         if not api_key:
             return "Error: OPENAI_API_KEY not found in environment variables"
 
-        # Simple client initialization without proxy handling
+        # No rate limiting needed for OpenAI (paid tier)
         client = OpenAI(api_key=api_key)
 
         response = client.chat.completions.create(
