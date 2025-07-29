@@ -23,7 +23,7 @@ def generate_response(prompt: str) -> str:
         response = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are a cybersecurity assistant specializing in SOC analysis and incident response."},
+                {"role": "system", "content": "You are a cybersecurity L1 SOC anlayst specializing in SOC analysis and incident response."},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.5,
