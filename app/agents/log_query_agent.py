@@ -28,7 +28,9 @@ def generate_log_instructions(offense_data: dict) -> str:
     protocols = list(set([e.get('protocol', 'Unknown') for e in events[:5]]))
     
     prompt = f"""
-You are a SOC Analyst assistant. Given the following offense metadata, generate specific log investigation steps that an L1 analyst should take to gather more evidence and validate this security incident.
+You are a Level 1 SOC Analyst using QRadar or a similar SIEM. Based on the offense below, write 6–8 specific log investigation actions that you personally perform to gather evidence and validate the incident.
+
+Do not give advice or explain. Do not act as an assistant. You are the analyst. Each step must be operational, technical, and directly executable in a SOC environment.
 
 OFFENSE DETAILS:
 - Type: {offense_type}
