@@ -52,8 +52,7 @@ def make_decision(reputation_results, similar_cases, offense_id: str = "Unknown"
         reputation_summary = "\n".join([str(r) for r in reputation_results]) or "None"
         memory_summary = "\n".join([f"Offense ID: {c.get('offense_id', 'N/A')}, Tags: {c.get('tags', [])}" for c in similar_cases]) or "None"
         prompt = f"""
-You are a SOC analyst agent. The following offense was analyzed, and no immediate high-risk indicators were detected.
-Provide a human-readable justification for why this offense could be marked as a false positive.
+You are a SOC analyst. Based on the following context, no immediate high-risk indicators were found.
 
 Reputation Results:
 {reputation_summary}
@@ -61,7 +60,9 @@ Reputation Results:
 Memory Matches:
 {memory_summary}
 
-Give 1-2 lines of reasoning based on the above, as if explaining to a security analyst.
+Write a brief 1–2 sentence justification explaining why this offense could be considered a false positive. 
+Frame your response as if you are an L1 SOC analyst reporting to an L2 analyst or client-side security manager. 
+Be clear, professional, and avoid assumptions beyond the provided data.
 """
         response = generate_dynamic_prompt(prompt).strip()
         reasons.append(response)
