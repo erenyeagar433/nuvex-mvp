@@ -42,7 +42,7 @@ def generate_offense_summary(offense_data: dict, reputation_results: list) -> st
     
     # Unified prompt that works well with both OpenAI and Gemini
     prompt = f"""
-You are a senior cybersecurity analyst. Analyze this security offense and provide a comprehensive summary.
+You are a SOC cybersecurity analyst. Analyze the following security offense and write a clear, professional summary.
 
 OFFENSE DETAILS:
 - Type: {offense_type}
@@ -60,13 +60,14 @@ EVENTS SUMMARY:
 IP REPUTATION ANALYSIS:
 {chr(10).join(rep_summary) if rep_summary else 'No reputation data available'}
 
-Provide a comprehensive 3-4 sentence analysis covering:
-1. What type of security incident this appears to be and its severity
-2. The risk level and potential business impact
-3. Key threat indicators and suspicious patterns
-4. Immediate concerns that warrant attention
+Instructions:
+Write a concise 3–4 sentence summary of the offense, covering:
+1. What type of incident this likely is and its severity
+2. The potential risk and business impact
+3. Notable indicators of compromise or suspicious activity
+4. Any urgent concerns needing immediate attention
 
-Focus on actionable insights for SOC analysts.
+Use only the information provided above. If any detail is missing or marked as unavailable, do not reference it. This summary will be shared with a client team, so keep it accurate, readable, and professional — suitable for inclusion in an incident review report.
 """
     
     try:
